@@ -1,0 +1,101 @@
+(
+    $mapRel := function ($rel) {
+        $rel and $not($rel = "scripted") ? [
+            $lookup(
+                {"nav": "contents"},
+                $rel
+            ),
+            $rel
+        ] : undefined
+    };
+    $getDc := function ($dcType) {
+        $.elements[name="package"].elements[name="metadata"].elements[name=$dcType].elements.text.$trim($)
+    };
+
+    $coverImg := $.elements[name="package"].elements[name="metadata"].elements[$.name="meta" and $.attributes.name="cover"].attributes.content;
+    $getProperty := function($property) {
+        $.elements[name="package"].elements[name="metadata"].elements[
+            name="meta" and attributes.property=$property
+        ].elements.text.$trim($)
+    };
+    $spineDict := $merge($.elements[name="package"].elements[name="spine"].elements[$not($.attributes.linear = "no")].attributes.{
+        $.idref: true
+    });
+    $manifest := $merge($.elements[name="package"].elements[name="manifest"].elements.attributes.{
+        $.id: {
+          "url": $.href,
+          "encodingFormat": $."media-type",
+          "rel": [$mapRel($.rel), $mapRel($.properties), undefined][0]
+        }
+    });
+	$resources := $merge($.elements[name="package"].elements[name="manifest"].elements.attributes[
+	    $not($lookup($spineDict, $.id))
+	].{
+        $.id: {
+          "url": $.href,
+          "encodingFormat": $."media-type",
+          "rel": [$mapRel($.rel), $mapRel($.properties), undefined][0]
+        }
+    });
+
+    $readingOrder := $.elements[name="package"].elements[name="spine"].elements[
+        $lookup($spineDict, $.attributes.idref)
+    ].$lookup($manifest, $.attributes.idref);
+    {
+      /*"@context": [
+        "language": $.elements[name="package"].attributes.'xml:lang',
+        "direction": $.elements[name="package"].attributes.dir,
+        "https://schema.org",
+        "/public/schemas/pub-context.jsonld"
+      ],*/
+      "encoding": $.declaration.attributes.encoding,
+      "direction": $.elements[name="package"].elements[name="spine"].elements.attributes.'page-progression-direction',
+      "id": $getDc("dc:identifier"),
+      "source": $getDc("dc:source"),
+      "type": $getProperty("schema:type"),
+      "abridged": $getProperty("schema:abridged"),
+      "dateModified": $getProperty("dcterms:modified"),
+      "duration": $getProperty("media:duration"),
+      "inLanguage": $getDc("dc:language"),
+      "name": $getDc("dc:title"),
+      "url": $getProperty("schema:url"),
+      "contributor": $getDc("dc:contributor"),
+      "coverage": $getDc("dc:coverage"),
+      "creator": $getDc("dc:creator"),
+      "datePublished": $getDc("dc:date")[-1],
+      "description": $getDc("dc:description"),
+      "format": $getDc("dc:format"),
+      "publisher": $getDc("dc:publisher"),
+      "relation": $getDc("dc:relation"),
+      "rights": $getDc("dc:rights"),
+      "subject": $getDc("dc:subject"),
+      "conformsTo": $getDc("dc:type"),
+      "a11y:certifiedBy": $getProperty("a11y:certifiedBy"),
+      "accessibilityFeature": $getProperty("schema:accessibilityFeature"),
+      "accessibilityHazard": $getProperty("schema:accessibilityHazard"),
+      "accessibilitySummary": $getProperty("schema:accessibilitySummary"),
+      "accessMode": $getProperty("schema:accessMode"),
+      "accessModeSufficient": $getProperty("schema:accessModeSufficient").{
+          "itemListElement": $split($, ","),
+          "type": "ItemList"
+      },
+      "accessibilityAPI": $getProperty("schema:accessibilityFeature"),
+      "accessibilityControl": $getProperty("schema:accessibilityControl"),
+      /*
+        @context/{"prefix": "url"}	package[@prefix]	Ability to define prefixes to import terms from additional vocabularies. EPUB uses a single attribute with whitespace-separated prefix/url definitions, whereas in a publication manifest each prefix is separately defined in the context.
+        LinkedResource/rel= describedby	link[rel=record]	Linked metadata records. The "record" relation used by EPUB is not registered with IANA.
+        meta[@scheme]
+        package/@version
+        term/language	metadata/meta[@xml:lang]	Local language overrides.
+        term/direction	metadata/meta[@dir]	Local direction overrides.
+      */
+      "readingOrder": $readingOrder,
+      "resources": $resources.*.$merge([$,
+        ($coverImg ? $contains($.url, $coverImg) : false)
+          ? {"encodingFormat": $."media-type", "url": $.url, "rel": 'cover-image'}
+          : {"encodingFormat": $."media-type", "url": $.url}
+      ]),
+
+      "links": $.elements[name="package"].elements[name="metadata"].elements[name="link"]
+    }
+)

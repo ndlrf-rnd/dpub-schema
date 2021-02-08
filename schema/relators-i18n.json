@@ -1,0 +1,1062 @@
+[
+  {
+    "code": "acp",
+    "i18n.ru": "Копиист произведения изобразительного искусства, автор копии",
+    "i18n.en": "Art copyist"
+  },
+  {
+    "code": "act",
+    "i18n.ru": "Актер, труппа",
+    "i18n.en": "Actor"
+  },
+  {
+    "code": "adp",
+    "i18n.ru": "Автор адаптации, обработки, переработки",
+    "i18n.en": "Adapter"
+  },
+  {
+    "code": "aft",
+    "i18n.ru": "Автор послесловия, колофона и т. п.",
+    "i18n.en": "Author of afterword, colophon, etc."
+  },
+  {
+    "code": "anl",
+    "i18n.ru": "Аналитик",
+    "i18n.en": "Analyst"
+  },
+  {
+    "code": "anm",
+    "i18n.ru": "Аниматор",
+    "i18n.en": "Animator"
+  },
+  {
+    "code": "ann",
+    "i18n.ru": "Автор аннотации",
+    "i18n.en": "Annotator"
+  },
+  {
+    "code": "ant",
+    "i18n.ru": "Библиографический предшественник",
+    "i18n.en": "Bibliographic antecedent"
+  },
+  {
+    "code": "app",
+    "i18n.ru": "Проситель, ходатай",
+    "i18n.en": "Applicant"
+  },
+  {
+    "code": "aqt",
+    "i18n.ru": "Автор цитат или выдержек из текста",
+    "i18n.en": "Author in quotations or text abstracts"
+  },
+  {
+    "code": "arc",
+    "i18n.ru": "Архитектор",
+    "i18n.en": "Architect"
+  },
+  {
+    "code": "ard",
+    "i18n.ru": "Художественный руководитель, художник-постановщик",
+    "i18n.en": "Artistic director"
+  },
+  {
+    "code": "arr",
+    "i18n.ru": "Аранжировщик, автор переложения",
+    "i18n.en": "Arranger"
+  },
+  {
+    "code": "art",
+    "i18n.ru": "Художник",
+    "i18n.en": "Artist"
+  },
+  {
+    "code": "asg",
+    "i18n.ru": "Цессионарий",
+    "i18n.en": "Assignee"
+  },
+  {
+    "code": "asn",
+    "i18n.ru": "Ассоциированное имя, связанное имя",
+    "i18n.en": "Associated name"
+  },
+  {
+    "code": "att",
+    "i18n.ru": "Предполагаемый автор",
+    "i18n.en": "Attributed name"
+  },
+  {
+    "code": "auc",
+    "i18n.ru": "Аукционист",
+    "i18n.en": "Auctioneer"
+  },
+  {
+    "code": "aud",
+    "i18n.ru": "Автор диалога",
+    "i18n.en": "Author of dialog"
+  },
+  {
+    "code": "aui",
+    "i18n.ru": "Автор предисловия и т. п.",
+    "i18n.en": "Author of introduction, etc."
+  },
+  {
+    "code": "aus",
+    "i18n.ru": "Автор сценария и т. п.",
+    "i18n.en": "Author of screenplay, etc."
+  },
+  {
+    "code": "aut",
+    "i18n.ru": "Автор, соавтор",
+    "i18n.en": "Author, joint author"
+  },
+  {
+    "code": "bdd",
+    "i18n.ru": "Оформитель переплета",
+    "i18n.en": "Binding designer, designer of binding"
+  },
+  {
+    "code": "bjd",
+    "i18n.ru": "Оформитель суперобложки",
+    "i18n.en": "Bookjacket designer, designer of bookjacket"
+  },
+  {
+    "code": "bkd",
+    "i18n.ru": "Оформитель книги",
+    "i18n.en": "Book designer, designer of book"
+  },
+  {
+    "code": "bkp",
+    "i18n.ru": "Производитель книг",
+    "i18n.en": "Book producer"
+  },
+  {
+    "code": "bnd",
+    "i18n.ru": "Переплетчик",
+    "i18n.en": "Binder"
+  },
+  {
+    "code": "bpd",
+    "i18n.ru": "Оформитель экслибриса",
+    "i18n.en": "Bookplate designer, designer of bookplate"
+  },
+  {
+    "code": "bsl",
+    "i18n.ru": "Книготорговец",
+    "i18n.en": "Bookseller"
+  },
+  {
+    "code": "ccp",
+    "i18n.ru": "Автор идеи, концепции",
+    "i18n.en": "Conceptor"
+  },
+  {
+    "code": "chr",
+    "i18n.ru": "Хореограф",
+    "i18n.en": "Choreographer"
+  },
+  {
+    "code": "clb",
+    "i18n.ru": "Сотрудник",
+    "i18n.en": "Collaborator"
+  },
+  {
+    "code": "cli",
+    "i18n.ru": "Клиент",
+    "i18n.en": "Client"
+  },
+  {
+    "code": "cll",
+    "i18n.ru": "Каллиграф",
+    "i18n.en": "Calligrapher"
+  },
+  {
+    "code": "clt",
+    "i18n.ru": "Фототипист",
+    "i18n.en": "Collotyper"
+  },
+  {
+    "code": "cmm",
+    "i18n.ru": "Комментатор",
+    "i18n.en": "Commentator"
+  },
+  {
+    "code": "cmp",
+    "i18n.ru": "Композитор",
+    "i18n.en": "Composer"
+  },
+  {
+    "code": "cmt",
+    "i18n.ru": "Наборщик, метранпаж",
+    "i18n.en": "Compositor, typesetter"
+  },
+  {
+    "code": "cng",
+    "i18n.ru": "Кинематографист, оператор-постановщик",
+    "i18n.en": "Cinematographer"
+  },
+  {
+    "code": "cnd",
+    "i18n.ru": "Дирижер",
+    "i18n.en": "Conductor"
+  },
+  {
+    "code": "cns",
+    "i18n.ru": "Цензор",
+    "i18n.en": "Censor, bowdlerizer, expurdator"
+  },
+  {
+    "code": "coe",
+    "i18n.ru": "Противная сторона, выдвигающая в суде возражения против искового требования, постановления, решения и т. п., против которой подана апелляционная жалоба в апелляционном процессе",
+    "i18n.en": "Contestant-appellee"
+  },
+  {
+    "code": "col",
+    "i18n.ru": "Коллекционер",
+    "i18n.en": "Collector"
+  },
+  {
+    "code": "com",
+    "i18n.ru": "Составитель",
+    "i18n.en": "Compiler"
+  },
+  {
+    "code": "cos",
+    "i18n.ru": "Противная сторона, выдвигающая в суде возражения против искового требования, постановления, решения и т. п.",
+    "i18n.en": "Contestant"
+  },
+  {
+    "code": "cot",
+    "i18n.ru": "Ответчик, выдвигающий в суде возражения против искового требования, постановления, решения и т. п. и подавшая апелляционную жалобу",
+    "i18n.en": "Contestant-appellant"
+  },
+  {
+    "code": "cov",
+    "i18n.ru": "Оформитель обложки",
+    "i18n.en": "Cover designer, designer of cover"
+  },
+  {
+    "code": "cpc",
+    "i18n.ru": "Претендент на авторское, издательское право, на право литературной собственности",
+    "i18n.en": "Copyright claimant, claimant"
+  },
+  {
+    "code": "cpe",
+    "i18n.ru": "Истец-ответчик по апелляции в деле, рассматриваемом на основе права «справедливости»",
+    "i18n.en": "Complainant-appellee"
+  },
+  {
+    "code": "cph",
+    "i18n.ru": "Владелец авторского права, копирайта; обладатель авторского права, копирайта",
+    "i18n.en": "Copyright holder"
+  },
+  {
+    "code": "cpl",
+    "i18n.ru": "Истец возмещения, жалобщик, потерпевший",
+    "i18n.en": "Complainant"
+  },
+  {
+    "code": "cpt",
+    "i18n.ru": "Истец-апеллянт по делу, рассматриваемому на основе права «справедливости»",
+    "i18n.en": "Complainant-appellant"
+  },
+  {
+    "code": "cre",
+    "i18n.ru": "Создатель",
+    "i18n.en": "Creator"
+  },
+  {
+    "code": "crp",
+    "i18n.ru": "Корреспондент",
+    "i18n.en": "Correspondent"
+  },
+  {
+    "code": "crr",
+    "i18n.ru": "Корректор рукописей, справщик рукописей",
+    "i18n.en": "Corrector"
+  },
+  {
+    "code": "csl",
+    "i18n.ru": "Консультант",
+    "i18n.en": "Consultant"
+  },
+  {
+    "code": "csp",
+    "i18n.ru": "Консультант проекта",
+    "i18n.en": "Consultant to a project"
+  },
+  {
+    "code": "cst",
+    "i18n.ru": "Художник-костюмер",
+    "i18n.en": "Costume designer"
+  },
+  {
+    "code": "ctb",
+    "i18n.ru": "Автор произведения, вошедшего в компиляцию",
+    "i18n.en": "Contributor"
+  },
+  {
+    "code": "cte",
+    "i18n.ru": "Противная сторона, отстаивающая свое исковое требование, постановление, решение и т. п., против которых ответчиком выдвинуты возражения в суде и против которого подана апелляционная жалоба в апелляционном процессе",
+    "i18n.en": "Contestee-appellee"
+  },
+  {
+    "code": "ctg",
+    "i18n.ru": "Картограф",
+    "i18n.en": "Cartographer"
+  },
+  {
+    "code": "ctr",
+    "i18n.ru": "Подрядчик",
+    "i18n.en": "Contractor"
+  },
+  {
+    "code": "cts",
+    "i18n.ru": "Противная сторона, отстаивающая свое исковое требование, постановление, решение и т. п., против которых ответчиком выдвинуты возражения в суде",
+    "i18n.en": "Contestee"
+  },
+  {
+    "code": "ctt",
+    "i18n.ru": "Противная сторона, отстаивающая свое исковое требование, постановление, решение и т. п., против которых ответчиком выдвинуты возражения в суде, подавший апелляционную жалобу",
+    "i18n.en": "Contestee-appellant"
+  },
+  {
+    "code": "cur",
+    "i18n.ru": "Куратор выставки",
+    "i18n.en": "Curator of an exhibition"
+  },
+  {
+    "code": "cwt",
+    "i18n.ru": "Автор комментариев и примечаний к печатному тексту",
+    "i18n.en": "Commentator for written text"
+  },
+  {
+    "code": "dfd",
+    "i18n.ru": "Ответчик",
+    "i18n.en": "Defendant"
+  },
+  {
+    "code": "dfe",
+    "i18n.ru": "Ответчик, против которого подана апелляционная жалоба",
+    "i18n.en": "Defendant-appellee"
+  },
+  {
+    "code": "dft",
+    "i18n.ru": "Ответчик, подавший апелляционную жалобу",
+    "i18n.en": "Defendant-appellant"
+  },
+  {
+    "code": "dgg",
+    "i18n.ru": "Организация, утвердившая ученую степень",
+    "i18n.en": "Degree grantor"
+  },
+  {
+    "code": "dis",
+    "i18n.ru": "Соискатель",
+    "i18n.en": "Dissertant"
+  },
+  {
+    "code": "dln",
+    "i18n.ru": "Чертёжник",
+    "i18n.en": "Delineator"
+  },
+  {
+    "code": "dnc",
+    "i18n.ru": "Танцор, танцовщик, танцовщица, балерина, балет (труппа), кордебалет",
+    "i18n.en": "Dancer"
+  },
+  {
+    "code": "dnr",
+    "i18n.ru": "Даритель",
+    "i18n.en": "Donor"
+  },
+  {
+    "code": "dpc",
+    "i18n.ru": "Предмет изображения",
+    "i18n.en": "Depicted"
+  },
+  {
+    "code": "dpt",
+    "i18n.ru": "Депозитор",
+    "i18n.en": "Depositor"
+  },
+  {
+    "code": "drm",
+    "i18n.ru": "Рисовальщик",
+    "i18n.en": "Draftsman, technical draftsman"
+  },
+  {
+    "code": "drt",
+    "i18n.ru": "Режиссер",
+    "i18n.en": "Director"
+  },
+  {
+    "code": "dsr",
+    "i18n.ru": "Оформитель",
+    "i18n.en": "Designer"
+  },
+  {
+    "code": "dst",
+    "i18n.ru": "Распространитель, агент по продажам, дистрибьютор, торговый посредник",
+    "i18n.en": "Distributor"
+  },
+  {
+    "code": "dtc",
+    "i18n.ru": "Поставщик данных",
+    "i18n.en": "Data contributor"
+  },
+  {
+    "code": "dte",
+    "i18n.ru": "Объект посвящения",
+    "i18n.en": "Dedicatee"
+  },
+  {
+    "code": "dtm",
+    "i18n.ru": "Администратор данных, администратор баз данных",
+    "i18n.en": "Data manager"
+  },
+  {
+    "code": "dto",
+    "i18n.ru": "Автор посвящения",
+    "i18n.en": "Dedicator"
+  },
+  {
+    "code": "dub",
+    "i18n.ru": "Сомнительный автор, неподтверждённый автор",
+    "i18n.en": "Dubious author"
+  },
+  {
+    "code": "edt",
+    "i18n.ru": "Редактор",
+    "i18n.en": "Editor"
+  },
+  {
+    "code": "egr",
+    "i18n.ru": "Гравёр",
+    "i18n.en": "Engraver"
+  },
+  {
+    "code": "elg",
+    "i18n.ru": "Осветитель",
+    "i18n.en": "Electrician, chief electrician, house electrician, master electrician"
+  },
+  {
+    "code": "elt",
+    "i18n.ru": "Изготовитель гальваностереотипов",
+    "i18n.en": "Electrotyper"
+  },
+  {
+    "code": "eng",
+    "i18n.ru": "Инженер",
+    "i18n.en": "Engineer"
+  },
+  {
+    "code": "etr",
+    "i18n.ru": "Офортист",
+    "i18n.en": "Etcher"
+  },
+  {
+    "code": "exp",
+    "i18n.ru": "Эксперт, оценщик",
+    "i18n.en": "Expert, appraiser"
+  },
+  {
+    "code": "fac",
+    "i18n.ru": "Факсимилист",
+    "i18n.en": "Facsimilist"
+  },
+  {
+    "code": "fld",
+    "i18n.ru": "Руководитель полевых работ",
+    "i18n.en": "Field director"
+  },
+  {
+    "code": "flm",
+    "i18n.ru": "Режиссер монтажа",
+    "i18n.en": "Film editor, motion picture editor"
+  },
+  {
+    "code": "fmo",
+    "i18n.ru": "Бывший владелец",
+    "i18n.en": "Former owner"
+  },
+  {
+    "code": "fpy",
+    "i18n.ru": "Первичный правообладатель",
+    "i18n.en": "First party"
+  },
+  {
+    "code": "fnd",
+    "i18n.ru": "Инвестор",
+    "i18n.en": "Funder"
+  },
+  {
+    "code": "frg",
+    "i18n.ru": "Изготовитель подделки",
+    "i18n.en": "Forger, copier, counterfeiter"
+  },
+  {
+    "code": "gis",
+    "i18n.ru": "Специалист по географической информационной системе",
+    "i18n.en": "Geographic information specialist, geospatial information specialist"
+  },
+  {
+    "code": "hnr",
+    "i18n.ru": "Объект чествования",
+    "i18n.en": "Honoree, memorial"
+  },
+  {
+    "code": "hst",
+    "i18n.ru": "Гость",
+    "i18n.en": "Host"
+  },
+  {
+    "code": "ill",
+    "i18n.ru": "Иллюстратор",
+    "i18n.en": "Illustrator"
+  },
+  {
+    "code": "ilu",
+    "i18n.ru": "Художник-иллюминатор рукописи, иллюминатор рукописи, иллюстратор-иллюминатор",
+    "i18n.en": "Illuminator"
+  },
+  {
+    "code": "ins",
+    "i18n.ru": "Автор дарственной надписи",
+    "i18n.en": "Inscriber"
+  },
+  {
+    "code": "inv",
+    "i18n.ru": "Изобретатель, автор изобретения",
+    "i18n.en": "Inventor, patent inventor"
+  },
+  {
+    "code": "itr",
+    "i18n.ru": "Инструменталист",
+    "i18n.en": "Instrumentalist"
+  },
+  {
+    "code": "ive",
+    "i18n.ru": "Интервьюируемый",
+    "i18n.en": "Interviewee"
+  },
+  {
+    "code": "ivr",
+    "i18n.ru": "Интервьюер",
+    "i18n.en": "Interviewer"
+  },
+  {
+    "code": "lbr",
+    "i18n.ru": "Лаборатория",
+    "i18n.en": "Laboratory"
+  },
+  {
+    "code": "lbt",
+    "i18n.ru": "Либреттист",
+    "i18n.en": "Librettist"
+  },
+  {
+    "code": "ldr",
+    "i18n.ru": "Руководитель лабораторных занятий",
+    "i18n.en": "Laboratory director, lab director"
+  },
+  {
+    "code": "led",
+    "i18n.ru": "Руководитель",
+    "i18n.en": "Lead"
+  },
+  {
+    "code": "lee",
+    "i18n.ru": "Ответчик в морском и церковном судопроизводстве, против которого подана апелляционная жалоба в апелляционном процессе",
+    "i18n.en": "Libelee-appellee"
+  },
+  {
+    "code": "lel",
+    "i18n.ru": "Ответчик в морском и церковном судопроизводстве",
+    "i18n.en": "Libelee"
+  },
+  {
+    "code": "len",
+    "i18n.ru": "Дающий книгу в долг",
+    "i18n.en": "Lender"
+  },
+  {
+    "code": "let",
+    "i18n.ru": "Ответчик в морском и церковном судопроизводстве, подавший апелляционную жалобу",
+    "i18n.en": "Libelee-appellant"
+  },
+  {
+    "code": "lgd",
+    "i18n.ru": "Художник по свету",
+    "i18n.en": "Lighting designer"
+  },
+  {
+    "code": "lie",
+    "i18n.ru": "Истец в морском и церковном судопроизводстве, против которого подана апелляционная жалоба",
+    "i18n.en": "Libelant-appellee"
+  },
+  {
+    "code": "lil",
+    "i18n.ru": "Истец в морском и церковном судопроизводстве",
+    "i18n.en": "Libelant"
+  },
+  {
+    "code": "lit",
+    "i18n.ru": "Истец в морском и церковном судопроизводстве, подавший апелляционную жалобу",
+    "i18n.en": "Libelant-appellant"
+  },
+  {
+    "code": "lsa",
+    "i18n.ru": "Ландшафтный архитектор, архитектор ландшафта",
+    "i18n.en": "Landscape architect"
+  },
+  {
+    "code": "lse",
+    "i18n.ru": "Лицензедержатель, лицензиат, получатель лицензии",
+    "i18n.en": "Licensee"
+  },
+  {
+    "code": "lso",
+    "i18n.ru": "Лицензедатель, лицензиар",
+    "i18n.en": "Licensor, imprimatur"
+  },
+  {
+    "code": "ltg",
+    "i18n.ru": "Литограф",
+    "i18n.en": "Lithographer"
+  },
+  {
+    "code": "lyr",
+    "i18n.ru": "Автор слов песни",
+    "i18n.en": "Lyricist"
+  },
+  {
+    "code": "mcp",
+    "i18n.ru": "Переписчик нот, копировщик нот",
+    "i18n.en": "Music copyist"
+  },
+  {
+    "code": "mfr",
+    "i18n.ru": "Изготовитель",
+    "i18n.en": "Manufacturer"
+  },
+  {
+    "code": "mdc",
+    "i18n.ru": "Ответственный за метаданные",
+    "i18n.en": "Metadata contact"
+  },
+  {
+    "code": "mod",
+    "i18n.ru": "Ведущий, радиоведущий, телеведущий",
+    "i18n.en": "Moderator"
+  },
+  {
+    "code": "mon",
+    "i18n.ru": "Наблюдатель",
+    "i18n.en": "Monitor"
+  },
+  {
+    "code": "mrk",
+    "i18n.ru": "Редактор файлов гипертекстовой разметки",
+    "i18n.en": "Markup editor"
+  },
+  {
+    "code": "msd",
+    "i18n.ru": "Музыкальный директор, музыкальный руководитель",
+    "i18n.en": "Musical director"
+  },
+  {
+    "code": "mte",
+    "i18n.ru": "Гравёр по металлу",
+    "i18n.en": "Metal-engraver"
+  },
+  {
+    "code": "mus",
+    "i18n.ru": "Музыкант",
+    "i18n.en": "Musician"
+  },
+  {
+    "code": "nrt",
+    "i18n.ru": "Повествователь; актёр, читающий текст от автора",
+    "i18n.en": "Narrator"
+  },
+  {
+    "code": "opn",
+    "i18n.ru": "Оппонент",
+    "i18n.en": "Opponent"
+  },
+  {
+    "code": "org",
+    "i18n.ru": "Инициатор",
+    "i18n.en": "Originator, investigator, principal investigator"
+  },
+  {
+    "code": "orm",
+    "i18n.ru": "Организатор конференции",
+    "i18n.en": "Organizer of meeting"
+  },
+  {
+    "code": "oth",
+    "i18n.ru": "Прочее",
+    "i18n.en": "Other"
+  },
+  {
+    "code": "own",
+    "i18n.ru": "Владелец, держатель, фондодержатель",
+    "i18n.en": "Owner"
+  },
+  {
+    "code": "pat",
+    "i18n.ru": "Покровитель, патрон",
+    "i18n.en": "Patron"
+  },
+  {
+    "code": "pbd",
+    "i18n.ru": "Ответственный, главный, литературный, титульный редактор",
+    "i18n.en": "Publishing director"
+  },
+  {
+    "code": "pbl",
+    "i18n.ru": "Издатель",
+    "i18n.en": "Publisher"
+  },
+  {
+    "code": "pdr",
+    "i18n.ru": "Руководитель проекта",
+    "i18n.en": "Project director"
+  },
+  {
+    "code": "pfr",
+    "i18n.ru": "Корректор печатных текстов",
+    "i18n.en": "Proofreader"
+  },
+  {
+    "code": "pht",
+    "i18n.ru": "Фотограф",
+    "i18n.en": "Photographer"
+  },
+  {
+    "code": "plt",
+    "i18n.ru": "Изготовитель печатных форм",
+    "i18n.en": "Platemaker"
+  },
+  {
+    "code": "pma",
+    "i18n.ru": "Разрешающее ведомство, лицензирующее ведомство",
+    "i18n.en": "Permitting agency"
+  },
+  {
+    "code": "pmn",
+    "i18n.ru": "Руководитель производства",
+    "i18n.en": "Production manager"
+  },
+  {
+    "code": "pop",
+    "i18n.ru": "Печатник гравюр",
+    "i18n.en": "Printer of plates"
+  },
+  {
+    "code": "ppm",
+    "i18n.ru": "Изготовитель бумаги",
+    "i18n.en": "Papermaker"
+  },
+  {
+    "code": "ppt",
+    "i18n.ru": "Кукловод",
+    "i18n.en": "Puppeteer"
+  },
+  {
+    "code": "prc",
+    "i18n.ru": "Ответственный за обработку данных",
+    "i18n.en": "Process contact"
+  },
+  {
+    "code": "prd",
+    "i18n.ru": "Персонал художественно-постановочной части",
+    "i18n.en": "Production personnel"
+  },
+  {
+    "code": "prf",
+    "i18n.ru": "Исполнитель",
+    "i18n.en": "Performer"
+  },
+  {
+    "code": "prg",
+    "i18n.ru": "Программист",
+    "i18n.en": "Programmer"
+  },
+  {
+    "code": "prm",
+    "i18n.ru": "Гравировщик",
+    "i18n.en": "Printmaker"
+  },
+  {
+    "code": "pro",
+    "i18n.ru": "Продюсер",
+    "i18n.en": "Producer"
+  },
+  {
+    "code": "prt",
+    "i18n.ru": "Типограф, печатник, типографщик",
+    "i18n.en": "Printer"
+  },
+  {
+    "code": "pta",
+    "i18n.ru": "Патентозаявитель",
+    "i18n.en": "Patent applicant"
+  },
+  {
+    "code": "pte",
+    "i18n.ru": "Истец, против которого подана апелляционная жалоба",
+    "i18n.en": "Plaintiff-appellee"
+  },
+  {
+    "code": "ptf",
+    "i18n.ru": "Истец",
+    "i18n.en": "Plaintiff"
+  },
+  {
+    "code": "pth",
+    "i18n.ru": "Патентовладелец, владелец патента, патентодержатель, патентообладатель",
+    "i18n.en": "Patent holder, patentee"
+  },
+  {
+    "code": "ptt",
+    "i18n.ru": "Истец, подавший апелляционную жалобу",
+    "i18n.en": "Plaintiff-appellant"
+  },
+  {
+    "code": "rbr",
+    "i18n.ru": "Исполнитель заголовков и красных строк",
+    "i18n.en": "Rubricator"
+  },
+  {
+    "code": "rce",
+    "i18n.ru": "Инженер звукозаписи, видеозаписи",
+    "i18n.en": "Recording engineer"
+  },
+  {
+    "code": "rcp",
+    "i18n.ru": "Адресат, получатель",
+    "i18n.en": "Recipient"
+  },
+  {
+    "code": "red",
+    "i18n.ru": "Редактор-составитель",
+    "i18n.en": "Redactor"
+  },
+  {
+    "code": "ren",
+    "i18n.ru": "Создатель эскизов",
+    "i18n.en": "Renderer"
+  },
+  {
+    "code": "res",
+    "i18n.ru": "Исследователь",
+    "i18n.en": "Researcher, performer of research"
+  },
+  {
+    "code": "rev",
+    "i18n.ru": "Рецензен, критик, обозреватель",
+    "i18n.en": "Reviewer"
+  },
+  {
+    "code": "rps",
+    "i18n.ru": "Репозитарий, депозитарий, хранилище",
+    "i18n.en": "Repository"
+  },
+  {
+    "code": "rpt",
+    "i18n.ru": "Репортёр",
+    "i18n.en": "Reporter"
+  },
+  {
+    "code": "rpy",
+    "i18n.ru": "Юридически ответственная сторона",
+    "i18n.en": "Responsible party"
+  },
+  {
+    "code": "rse",
+    "i18n.ru": "Ответчик по делу, рассмотренному на основе права «справедливости», против которого подана апелляционная жалоба в апелляционном процессе",
+    "i18n.en": "Respondent-appellee"
+  },
+  {
+    "code": "rsg",
+    "i18n.ru": "Постановщик",
+    "i18n.en": "Restager"
+  },
+  {
+    "code": "rsp",
+    "i18n.ru": "Ответчик по делу, рассматриваемому на основе права «справедливости»",
+    "i18n.en": "Respondent"
+  },
+  {
+    "code": "rst",
+    "i18n.ru": "Ответчик по делу, рассмотренному на основе права «справедливости», подавший апелляционную жалобу",
+    "i18n.en": "Respondent-appellant"
+  },
+  {
+    "code": "rth",
+    "i18n.ru": "Руководитель исследовательского коллектива",
+    "i18n.en": "Research team head"
+  },
+  {
+    "code": "rtm",
+    "i18n.ru": "Участник исследовательского коллектива",
+    "i18n.en": "Research team member"
+  },
+  {
+    "code": "sad",
+    "i18n.ru": "Научный консультант",
+    "i18n.en": "Scientific advisor"
+  },
+  {
+    "code": "sce",
+    "i18n.ru": "Сценарист, кинодраматург",
+    "i18n.en": "Scenarist"
+  },
+  {
+    "code": "scl",
+    "i18n.ru": "Скульптор",
+    "i18n.en": "Sculptor"
+  },
+  {
+    "code": "scr",
+    "i18n.ru": "Писарь, писец",
+    "i18n.en": "Scribe"
+  },
+  {
+    "code": "sds",
+    "i18n.ru": "Художник по звуку, дизайнер по звуку, звукодизайнер",
+    "i18n.en": "Sound designer"
+  },
+  {
+    "code": "sec",
+    "i18n.ru": "Секретарь",
+    "i18n.en": "Secretary"
+  },
+  {
+    "code": "sgn",
+    "i18n.ru": "Автор подписи",
+    "i18n.en": "Signer"
+  },
+  {
+    "code": "sht",
+    "i18n.ru": "Принимающая сторона",
+    "i18n.en": "Supporting host"
+  },
+  {
+    "code": "sng",
+    "i18n.ru": "Певец",
+    "i18n.en": "Singer"
+  },
+  {
+    "code": "spk",
+    "i18n.ru": "Диктор",
+    "i18n.en": "Speaker"
+  },
+  {
+    "code": "spn",
+    "i18n.ru": "Спонсор",
+    "i18n.en": "Sponsor"
+  },
+  {
+    "code": "spy",
+    "i18n.ru": "Сторона-правопреемник, правопреемник",
+    "i18n.en": "Second party"
+  },
+  {
+    "code": "srv",
+    "i18n.ru": "Землемер, геодезист, маркшейдер, топограф",
+    "i18n.en": "Surveyor"
+  },
+  {
+    "code": "std",
+    "i18n.ru": "Художник-декоратор",
+    "i18n.en": "Set designer"
+  },
+  {
+    "code": "stl",
+    "i18n.ru": "Рассказчик, сказитель, сказочник",
+    "i18n.en": "Storyteller"
+  },
+  {
+    "code": "stm",
+    "i18n.ru": "Ассистент режиссёра, помощник режиссёра",
+    "i18n.en": "Stage manager"
+  },
+  {
+    "code": "stn",
+    "i18n.ru": "Орган по стандартизации",
+    "i18n.en": "Standards body"
+  },
+  {
+    "code": "str",
+    "i18n.ru": "Изготовитель стереотипов",
+    "i18n.en": "Stereotyper"
+  },
+  {
+    "code": "tcd",
+    "i18n.ru": "Технический директор, заведующий постановочной частью",
+    "i18n.en": "Technical director"
+  },
+  {
+    "code": "tch",
+    "i18n.ru": "Преподаватель, инструктор, учитель",
+    "i18n.en": "Teacher, instructor"
+  },
+  {
+    "code": "ths",
+    "i18n.ru": "Научный руководитель",
+    "i18n.en": "Thesis advisor, promoter"
+  },
+  {
+    "code": "trc",
+    "i18n.ru": "Переписчик",
+    "i18n.en": "Transcriber"
+  },
+  {
+    "code": "trl",
+    "i18n.ru": "Переводчик",
+    "i18n.en": "Translator"
+  },
+  {
+    "code": "tyd",
+    "i18n.ru": "Разработчик шрифта",
+    "i18n.en": "Type designer, designer of type"
+  },
+  {
+    "code": "tyg",
+    "i18n.ru": "Шрифтовой оформитель",
+    "i18n.en": "Typographer"
+  },
+  {
+    "code": "vdg",
+    "i18n.ru": "Оператор-видеопостановщик",
+    "i18n.en": "Videographer"
+  },
+  {
+    "code": "voc",
+    "i18n.ru": "Вокалист",
+    "i18n.en": "Vocalist"
+  },
+  {
+    "code": "wam",
+    "i18n.ru": "Автор текста сопроводительного материала",
+    "i18n.en": "Writer of accompanying material"
+  },
+  {
+    "code": "wdc",
+    "i18n.ru": "Гравёр по дереву в технике обрезной ксилографии",
+    "i18n.en": "Woodcutter"
+  },
+  {
+    "code": "wde",
+    "i18n.ru": "Гравёр по дереву в технике торцовой ксилографии",
+    "i18n.en": "Wood-engraver"
+  },
+  {
+    "code": "wit",
+    "i18n.ru": "Свидетель, очевидец, понятой",
+    "i18n.en": "Witness, deponent, eyewitness, observer, onlooker, testifier"
+  }
+]

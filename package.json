@@ -1,0 +1,47 @@
+{
+  "name": "@ndlrf/dpub-schema",
+  "description": "Digital publiation Schemas and utilities",
+  "authors": [
+    {
+      "name": "National electronic library of Russian Federation",
+      "url": "https://rusneb.ru"
+    },
+    {
+      "name": "Russian state library",
+      "url": "https://rsl.ru"
+    }
+  ],
+  "keywords": [
+    "EPUB", "EPUB3", "NEBRF", "NEB", "library", "electronic publication", "metadata", "webpub", "dpub", "manifest"
+  ],
+  "homepage": "https://github.com/ndlrf-rnd/dpub-schema",
+  "bugs": {
+    "url": "https://github.com/ndlrf-rnd/dpub-schema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ndlrf-rnd/dpub-schema.git"
+  },
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "main": "./utils/index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "start": "node utils/index.js",
+    "cli": "node utils/cli.js",
+    "test": "echo 'No testing'",
+    "build": "node utils/cli.js"
+  },
+  "dependencies": {
+    "js-yaml": "3.14.1",
+    "jsonata": "1.8.4",
+    "jsonld": "2.0.2",
+    "lodash.omit": "4.5.0",
+    "lodash.pick": "4.4.0",
+    "xml-js": "1.6.11"
+  },
+  "devDependencies": {
+  }
+}

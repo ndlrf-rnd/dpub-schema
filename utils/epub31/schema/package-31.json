@@ -1,0 +1,1010 @@
+{
+  "xs:schema": [
+    {
+      "schemaLocation": "datatypes.xsd"
+    },
+    {
+      "namespace": "http://www.idpf.org/2007/opf",
+      "schemaLocation": "opf.xsd"
+    },
+    {
+      "namespace": "http://www.idpf.org/2007/ops",
+      "schemaLocation": "epub-prefix-attr.xsd"
+    },
+    {
+      "namespace": "http://www.w3.org/XML/1998/namespace",
+      "schemaLocation": "xml.xsd"
+    },
+    {
+      "opf.package.attlist": [
+        "dc:opf.version.attr",
+        "dc:opf.unique.identifier.attr",
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        },
+        {
+          "name": "prefix"
+        },
+        "dc:opf.i18n.attrs"
+      ],
+      "name": "opf.package.attlist"
+    },
+    {
+      "opf.version.attr": [
+        {
+          "version": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "3.1"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "version",
+          "use": "required"
+        }
+      ],
+      "name": "opf.version.attr"
+    },
+    {
+      "opf.unique.identifier.attr": [
+        {
+          "name": "unique-identifier",
+          "use": "required",
+          "type": "dc:datatype.IDREF"
+        }
+      ],
+      "name": "opf.unique.identifier.attr"
+    },
+    {
+      "opf.package.content": [
+        {
+          "xs:sequence": [
+            "dc:opf.metadata",
+            "opf:manifest",
+            "opf:spine",
+            "opf:collection"
+          ]
+        }
+      ],
+      "name": "opf.package.content"
+    },
+    {
+      "opf.metadata": [
+        {
+          "xs:sequence": [
+            "opf:metadata"
+          ]
+        }
+      ],
+      "name": "opf.metadata"
+    },
+    {
+      "opf.metadata.content": [
+        {
+          "xs:choice": [
+            "dc:opf.dc.elems",
+            "opf:meta",
+            "dc:opf.link"
+          ],
+          "minOccurs": "0",
+          "maxOccurs": "unbounded"
+        }
+      ],
+      "name": "opf.metadata.content"
+    },
+    {
+      "opf.link": [
+        {
+          "xs:sequence": [
+            "opf:link"
+          ]
+        }
+      ],
+      "name": "opf.link"
+    },
+    {
+      "opf.property.attr": [
+        {
+          "name": "property",
+          "use": "required",
+          "type": "dc:datatype.property"
+        }
+      ],
+      "name": "opf.property.attr"
+    },
+    {
+      "opf.rel.attr": [
+        {
+          "name": "rel",
+          "use": "required",
+          "type": "dc:datatype.properties"
+        }
+      ],
+      "name": "opf.rel.attr"
+    },
+    {
+      "opf.scheme.attr": [
+        {
+          "name": "scheme",
+          "use": "required",
+          "type": "dc:datatype.property"
+        }
+      ],
+      "name": "opf.scheme.attr"
+    },
+    {
+      "opf.refines.attr": [
+        {
+          "name": "refines",
+          "use": "required",
+          "type": "dc:datatype.URI"
+        }
+      ],
+      "name": "opf.refines.attr"
+    },
+    {
+      "identifier": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    },
+                    "opf:scheme"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "identifier"
+    },
+    {
+      "title": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist",
+                    "opf:file-as",
+                    "opf:alt-rep",
+                    "opf:alt-rep-lang"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "title"
+    },
+    {
+      "language": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    }
+                  ],
+                  "base": "dc:datatype.languagecode"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "language"
+    },
+    {
+      "date": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    }
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "date"
+    },
+    {
+      "source": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    },
+                    "opf:scheme"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "source"
+    },
+    {
+      "type": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    }
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "type"
+    },
+    {
+      "format": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    {
+                      "name": "id",
+                      "type": "dc:datatype.ID"
+                    }
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "format"
+    },
+    {
+      "creator": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist",
+                    "opf:role",
+                    "opf:file-as",
+                    "opf:alt-rep",
+                    "opf:alt-rep-lang"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "creator"
+    },
+    {
+      "subject": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist",
+                    "opf:authority",
+                    "opf:term"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "subject"
+    },
+    {
+      "description": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "description"
+    },
+    {
+      "publisher": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist",
+                    "opf:file-as",
+                    "opf:alt-rep",
+                    "opf:alt-rep-lang"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "publisher"
+    },
+    {
+      "contributor": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist",
+                    "opf:role",
+                    "opf:file-as",
+                    "opf:alt-rep",
+                    "opf:alt-rep-lang"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "contributor"
+    },
+    {
+      "relation": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "relation"
+    },
+    {
+      "coverage": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "coverage"
+    },
+    {
+      "rights": [
+        {
+          "xs:complexType": [
+            {
+              "xs:simpleContent": [
+                {
+                  "xs:extension": [
+                    "dc:opf.dc.attlist"
+                  ],
+                  "base": "dc:datatype.string.nonempty"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "rights"
+    },
+    {
+      "opf.dc.elems": [
+        {
+          "xs:sequence": [
+            {
+              "xs:choice": [
+                "dc:identifier",
+                "dc:title",
+                "dc:language",
+                "dc:date",
+                "dc:source",
+                "dc:type",
+                "dc:format",
+                "dc:creator",
+                "dc:subject",
+                "dc:description",
+                "dc:publisher",
+                "dc:contributor",
+                "dc:relation",
+                "dc:coverage",
+                "dc:rights"
+              ],
+              "minOccurs": "0",
+              "maxOccurs": "unbounded"
+            }
+          ]
+        }
+      ],
+      "name": "opf.dc.elems"
+    },
+    {
+      "opf.dc.attlist": [
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        },
+        "dc:opf.i18n.attrs"
+      ],
+      "name": "opf.dc.attlist"
+    },
+    {
+      "opf.manifest.attlist": [
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        }
+      ],
+      "name": "opf.manifest.attlist"
+    },
+    {
+      "opf.manifest.content": [
+        {
+          "xs:sequence": [
+            "opf:item"
+          ]
+        }
+      ],
+      "name": "opf.manifest.content"
+    },
+    {
+      "opf.item.attlist": [
+        "dc:opf.id.attr",
+        "dc:opf.href.attr",
+        "dc:opf.media-type.attr",
+        {
+          "name": "fallback",
+          "type": "dc:datatype.IDREF"
+        },
+        {
+          "name": "media-overlay",
+          "type": "dc:datatype.IDREF"
+        },
+        {
+          "name": "duration",
+          "type": "dc:datatype.smil.npt"
+        },
+        {
+          "name": "properties",
+          "type": "dc:datatype.properties"
+        }
+      ],
+      "name": "opf.item.attlist"
+    },
+    {
+      "opf.fallback.attr": [
+        {
+          "name": "fallback",
+          "use": "required",
+          "type": "dc:datatype.IDREF"
+        }
+      ],
+      "name": "opf.fallback.attr"
+    },
+    {
+      "opf.media-overlay.attr": [
+        {
+          "name": "media-overlay",
+          "use": "required",
+          "type": "dc:datatype.IDREF"
+        }
+      ],
+      "name": "opf.media-overlay.attr"
+    },
+    {
+      "opf.duration.attr": [
+        {
+          "name": "duration",
+          "use": "required",
+          "type": "dc:datatype.smil.npt"
+        }
+      ],
+      "name": "opf.duration.attr"
+    },
+    {
+      "opf.properties.attr": [
+        {
+          "name": "properties",
+          "use": "required",
+          "type": "dc:datatype.properties"
+        }
+      ],
+      "name": "opf.properties.attr"
+    },
+    {
+      "opf.spine.attlist": [
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        },
+        {
+          "name": "toc",
+          "type": "dc:datatype.IDREF"
+        },
+        {
+          "page-progression-direction": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "ltr"
+                    },
+                    {
+                      "value": "rtl"
+                    },
+                    {
+                      "value": "default"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "page-progression-direction"
+        }
+      ],
+      "name": "opf.spine.attlist"
+    },
+    {
+      "opf.spine.toc.attr": [
+        {
+          "name": "toc",
+          "use": "required",
+          "type": "dc:datatype.IDREF"
+        }
+      ],
+      "name": "opf.spine.toc.attr"
+    },
+    {
+      "opf.ppd.attr": [
+        {
+          "page-progression-direction": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "ltr"
+                    },
+                    {
+                      "value": "rtl"
+                    },
+                    {
+                      "value": "default"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "page-progression-direction",
+          "use": "required"
+        }
+      ],
+      "name": "opf.ppd.attr"
+    },
+    {
+      "opf.spine.content": [
+        {
+          "xs:sequence": [
+            "opf:itemref"
+          ]
+        }
+      ],
+      "name": "opf.spine.content"
+    },
+    {
+      "opf.itemref.attlist": [
+        "dc:opf.itemref.idref.attr",
+        {
+          "linear": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "yes"
+                    },
+                    {
+                      "value": "no"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "linear"
+        },
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        },
+        {
+          "name": "properties",
+          "type": "dc:datatype.properties"
+        }
+      ],
+      "name": "opf.itemref.attlist"
+    },
+    {
+      "opf.itemref.idref.attr": [
+        {
+          "name": "idref",
+          "use": "required",
+          "type": "dc:datatype.IDREF"
+        }
+      ],
+      "name": "opf.itemref.idref.attr"
+    },
+    {
+      "opf.itemref.linear.attr": [
+        {
+          "linear": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "yes"
+                    },
+                    {
+                      "value": "no"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "linear",
+          "use": "required"
+        }
+      ],
+      "name": "opf.itemref.linear.attr"
+    },
+    {
+      "opf.collection.attlist": [
+        {
+          "name": "id",
+          "type": "dc:datatype.ID"
+        },
+        {
+          "dir": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "ltr"
+                    },
+                    {
+                      "value": "rtl"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "dir"
+        },
+        "xml:lang",
+        "dc:opf.collection.role.attr"
+      ],
+      "name": "opf.collection.attlist"
+    },
+    {
+      "opf.collection.role.attr": [
+        {
+          "name": "role",
+          "use": "required",
+          "type": "dc:datatype.space.separated.tokens"
+        }
+      ],
+      "name": "opf.collection.role.attr"
+    },
+    {
+      "opf.collection.content": [
+        {
+          "xs:sequence": [
+            "dc:opf.collection.metadata",
+            {
+              "xs:choice": [
+                "opf:collection",
+                {
+                  "xs:sequence": [
+                    "opf:collection",
+                    "dc:opf.collection.link"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "opf.collection.content"
+    },
+    {
+      "opf.collection.metadata": [
+        {
+          "xs:sequence": [
+            "opf:metadata1"
+          ]
+        }
+      ],
+      "name": "opf.collection.metadata"
+    },
+    {
+      "opf.collection.metadata.content": [
+        {
+          "xs:choice": [
+            "dc:opf.collection.dc.elems",
+            "opf:meta",
+            "dc:opf.link"
+          ],
+          "minOccurs": "0",
+          "maxOccurs": "unbounded"
+        }
+      ],
+      "name": "opf.collection.metadata.content"
+    },
+    {
+      "opf.collection.dc.elems": [
+        {
+          "xs:sequence": [
+            {
+              "xs:choice": [
+                "dc:identifier",
+                "dc:title",
+                "dc:language",
+                "dc:date",
+                "dc:source",
+                "dc:type",
+                "dc:format",
+                "dc:creator",
+                "dc:subject",
+                "dc:description",
+                "dc:publisher",
+                "dc:contributor",
+                "dc:relation",
+                "dc:coverage",
+                "dc:rights"
+              ],
+              "minOccurs": "0",
+              "maxOccurs": "unbounded"
+            }
+          ]
+        }
+      ],
+      "name": "opf.collection.dc.elems"
+    },
+    {
+      "opf.collection.link": [
+        {
+          "xs:sequence": [
+            "opf:link1"
+          ]
+        }
+      ],
+      "name": "opf.collection.link"
+    },
+    {
+      "opf.media-type.attr": [
+        {
+          "name": "media-type",
+          "use": "required",
+          "type": "dc:datatype.mimetype"
+        }
+      ],
+      "name": "opf.media-type.attr"
+    },
+    {
+      "opf.href.attr": [
+        {
+          "name": "href",
+          "use": "required",
+          "type": "dc:datatype.URI"
+        }
+      ],
+      "name": "opf.href.attr"
+    },
+    {
+      "opf.id.attr": [
+        {
+          "name": "id",
+          "use": "required",
+          "type": "dc:datatype.ID"
+        }
+      ],
+      "name": "opf.id.attr"
+    },
+    {
+      "opf.authority.attr": [
+        "opf:authority"
+      ],
+      "name": "opf.authority.attr"
+    },
+    {
+      "opf.term.attr": [
+        "opf:term"
+      ],
+      "name": "opf.term.attr"
+    },
+    {
+      "opf.id.scheme.attr": [
+        "opf:scheme"
+      ],
+      "name": "opf.id.scheme.attr"
+    },
+    {
+      "opf.alt-rep.attrs": [
+        "opf:alt-rep",
+        "opf:alt-rep-lang"
+      ],
+      "name": "opf.alt-rep.attrs"
+    },
+    {
+      "opf.file-as.attr": [
+        "opf:file-as"
+      ],
+      "name": "opf.file-as.attr"
+    },
+    {
+      "opf.role.attr": [
+        "opf:role"
+      ],
+      "name": "opf.role.attr"
+    },
+    {
+      "opf.i18n.attrs": [
+        "xml:lang",
+        {
+          "dir": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "ltr"
+                    },
+                    {
+                      "value": "rtl"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "dir"
+        }
+      ],
+      "name": "opf.i18n.attrs"
+    },
+    {
+      "opf.xml.lang.attr": [
+        "xml:lang"
+      ],
+      "name": "opf.xml.lang.attr"
+    },
+    {
+      "opf.dir.attr": [
+        {
+          "dir": [
+            {
+              "xs:simpleType": [
+                {
+                  "xs:restriction": [
+                    {
+                      "value": "ltr"
+                    },
+                    {
+                      "value": "rtl"
+                    }
+                  ],
+                  "base": "xs:token"
+                }
+              ]
+            }
+          ],
+          "name": "dir",
+          "use": "required"
+        }
+      ],
+      "name": "opf.dir.attr"
+    }
+  ],
+  "xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+  "elementFormDefault": "qualified",
+  "targetNamespace": "http://purl.org/dc/elements/1.1/",
+  "xmlns:opf": "http://www.idpf.org/2007/opf",
+  "xmlns:dc": "http://purl.org/dc/elements/1.1/",
+  "xmlns:epub": "http://www.idpf.org/2007/ops"
+}

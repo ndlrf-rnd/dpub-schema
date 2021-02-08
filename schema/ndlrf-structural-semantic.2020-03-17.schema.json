@@ -1,0 +1,1127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "locator.schema.json": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Readium Locator",
+      "type": "object",
+      "properties": {
+        "href": {
+          "description": "URI of the resource that the Locator Object points to",
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "type": {
+          "description": "MIME type of the resource that the Locator Object points to",
+          "type": "string"
+        },
+        "title": {
+          "description": "The title of the chapter or section which is more relevant in the context of this locator",
+          "type": "string"
+        },
+        "locations": {
+          "type": "object",
+          "properties": {
+            "fragments": {
+              "description": "Contains one or more fragment in the resource referenced by the Locator Object",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "progression": {
+              "description": "Progression in the resource expressed as a percentage",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "position": {
+              "description": "An index in the publication",
+              "type": "integer",
+              "minimum": 1
+            },
+            "totalProgression": {
+              "description": "Progression in the publication expressed as a percentage",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "text": {
+          "type": "object",
+          "properties": {
+            "before": {
+              "description": "The text before the locator",
+              "type": "string"
+            },
+            "highlight": {
+              "description": "The text at the locator",
+              "type": "string"
+            },
+            "after": {
+              "description": "The text after the locator",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "href",
+        "type"
+      ]
+    },
+    "localizable-map.schema.json": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Localizable String Based on Language Maps",
+      "type": "object",
+      "patternProperties": {
+        "^((?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((?:([A-Za-z]{2,3}(-(?:[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-(?:[A-Za-z]{4}))?(-(?:[A-Za-z]{2}|[0-9]{3}))?(-(?:[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?:[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(?:x(-[A-Za-z0-9]{1,8})+))?)|(?:x(-[A-Za-z0-9]{1,8})+))$": {
+          "type": "string"
+        }
+      },
+      "default": {
+        "rus": ""
+      }
+    },
+    "link.schema.json": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Publication Links",
+      "type": "object",
+      "properties": {
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "LinkedResource"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "contains": {
+                "const": "LinkedResource"
+              }
+            }
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "iri-reference"
+        },
+        "encodingFormat": {
+          "type": "string"
+        },
+        "name": {
+          "$ref": "#/definitions/localizable.schema.json"
+        },
+        "description": {
+          "$ref": "#/definitions/localizable-map.schema.json"
+        },
+        "rel": {
+          "type": "string",
+          "enum": [
+            "cover",
+            "pagelist",
+            "contents",
+            "record",
+            "voicing",
+            "acquire",
+            "about",
+            "alternate",
+            "appendix",
+            "apple-touch-icon",
+            "apple-touch-startup-image",
+            "archives",
+            "author",
+            "blocked-by",
+            "bookmark",
+            "canonical",
+            "chapter",
+            "cite-as",
+            "collection",
+            "convertedFrom",
+            "copyright",
+            "create-form",
+            "current",
+            "describedby",
+            "describes",
+            "disclosure",
+            "dns-prefetch",
+            "duplicate",
+            "edit",
+            "edit-form",
+            "edit-media",
+            "enclosure",
+            "external",
+            "first",
+            "glossary",
+            "help",
+            "hosts",
+            "hub",
+            "icon",
+            "index",
+            "intervalAfter",
+            "intervalBefore",
+            "intervalContains",
+            "intervalDisjoint",
+            "intervalDuring",
+            "intervalEquals",
+            "intervalFinishedBy",
+            "intervalFinishes",
+            "intervalIn",
+            "intervalMeets",
+            "intervalMetBy",
+            "intervalOverlappedBy",
+            "intervalOverlaps",
+            "intervalStartedBy",
+            "intervalStarts",
+            "item",
+            "last",
+            "latest-version",
+            "license",
+            "lrdd",
+            "manifest",
+            "mask-icon",
+            "memento",
+            "micropub",
+            "modulepreload",
+            "monitor",
+            "monitor-group",
+            "next",
+            "next-archive",
+            "nofollow",
+            "noopener",
+            "noreferrer",
+            "opener",
+            "openid2.local_id",
+            "openid2.provider",
+            "original",
+            "P3Pv1",
+            "payment",
+            "pingback",
+            "preconnect",
+            "predecessor-version",
+            "prefetch",
+            "preload",
+            "prerender",
+            "prev",
+            "preview",
+            "previous",
+            "prev-archive",
+            "privacy-policy",
+            "profile",
+            "related",
+            "restconf",
+            "replies",
+            "search",
+            "section",
+            "self",
+            "service",
+            "service-desc",
+            "service-doc",
+            "service-meta",
+            "sponsored",
+            "start",
+            "status",
+            "stylesheet",
+            "subsection",
+            "successor-version",
+            "sunset",
+            "tag",
+            "terms-of-service",
+            "timegate",
+            "timemap",
+            "type",
+            "ugc",
+            "up",
+            "version-history",
+            "via",
+            "webmention",
+            "working-copy",
+            "working-copy-of"
+          ]
+        },
+        "integrity": {
+          "type": "string"
+        },
+        "length": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "alternate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link.schema.json"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "language.schema.json": {
+      "type": "string",
+      "default": "rus"
+    },
+    "localizable.schema.json": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "language": {
+            "$ref": "#/definitions/language.schema.json"
+          }
+        },
+        "uniqueItems": true,
+        "required": [
+          "value"
+        ]
+      },
+      "localizable-map.schema.json": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "patternProperties": {
+              "^((?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((?:([A-Za-z]{2,3}(-(?:[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-(?:[A-Za-z]{4}))?(-(?:[A-Za-z]{2}|[0-9]{3}))?(-(?:[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?:[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(?:x(-[A-Za-z0-9]{1,8})+))?)|(?:x(-[A-Za-z0-9]{1,8})+))$": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "minProperties": 1
+          }
+        ]
+      }
+    },
+    "contributor.schema.json": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Contributor",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "#/definitions/contributor-object.schema.json"
+      },
+      "uniqueItems": true
+    },
+    "contributor-object.schema.json": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/localizable.schema.json"
+        },
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "type": {
+          "type": "string",
+          "default": "Person",
+          "enum": [
+            "Person",
+            "Organization"
+          ]
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "paragraph": {
+      "description": "Paragraph",
+      "type": "array",
+      "items": {
+        "description": "Sentence",
+        "anyOf": [
+          {
+            "title": "sentence",
+            "type": "string"
+          },
+          {
+            "title": "topic-sentence",
+            "type": "string"
+          },
+          {
+            "title": "concluding-sentence",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "text": {
+      "title": "Text",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/paragraph"
+      }
+    },
+    "legal-notes": {
+      "$ref": "#/definitions/list"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "description": "list-item",
+        "$ref": "#/definitions/text"
+      }
+    },
+    "footnotes": {
+      "title": "footnotes",
+      "description": "Foot notes",
+      "type": "array",
+      "items": {
+        "title": "Footnote",
+        "$ref": "#/definitions/content"
+      }
+    },
+    "endnotes": {
+      "title": "endnotes",
+      "description": "End notes",
+      "type": "array",
+      "items": {
+        "title": "Footnote",
+        "$ref": "#/definitions/content"
+      }
+    },
+    "credits": {
+      "type": "object",
+      "title": "credits",
+      "description": "Credits",
+      "properties": {
+        "contributor": {
+          "$ref": "#/definitions/contributor.schema.json"
+        },
+        "copyright": {
+          "title": "copyright",
+          "description": "Copyright",
+          "$ref": "#/definitions/legal-notes"
+        },
+        "restriction-on-reuse": {
+          "title": "restriction-on-reuse",
+          "description": "Restriction on reuse",
+          "$ref": "#/definitions/legal-notes"
+        }
+      }
+    },
+    "quote": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "credits": {
+          "$ref": "#/definitions/credits"
+        }
+      }
+    },
+    "term": {
+      "anyOf": [
+        {
+          "title": "Glyph",
+          "type": "string"
+        },
+        {
+          "title": "Image",
+          "$ref": "#/definitions/link.schema.json"
+        },
+        {
+          "title": "Phrase",
+          "type": "string"
+        },
+        {
+          "title": "string",
+          "type": "string"
+        }
+      ]
+    },
+    "title": {
+      "title": "Title",
+      "type": "object",
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "enum": [
+            "chapter",
+            "part",
+            "bridgehead"
+          ],
+          "default": "chapter"
+        },
+        "ordinal": {
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "subtitle": {
+          "title": "Subtitle",
+          "type": "string"
+        }
+      }
+    },
+    "figure": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "title": "Image",
+          "$ref": "#/definitions/link.schema.json"
+        },
+        "figcaption": {
+          "title": "figcaption",
+          "type": "object",
+          "properties": {
+            "label": {
+              "title": "Label",
+              "const": "Figure"
+            },
+            "ordinal": {
+              "title": "Ordinal",
+              "type": "integer"
+            },
+            "subtitle": {
+              "$ref": "#/definitions/text"
+            },
+            "credits": {
+              "$ref": "#/definitions/credits"
+            }
+          }
+        }
+      }
+    },
+    "table": {
+      "title": "Table",
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": {
+            "title": "row",
+            "description": "Row",
+            "type": "array",
+            "items": {
+              "title": "cell",
+              "description": "Cell",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "content": {
+      "title": "Content",
+      "type": "object",
+      "properties": {
+        "keywords": {
+          "title": "keywords",
+          "type": "array",
+          "items": {
+            "title": "keyword",
+            "$ref": "#/definitions/term"
+          }
+        },
+        "title": {
+          "$ref": "#/definitions/title"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "figure": {
+          "$ref": "#/definitions/figure"
+        },
+        "table": {
+          "$ref": "#/definitions/table"
+        },
+        "list": {
+          "$ref": "#/definitions/list"
+        },
+        "credits": {
+          "$ref": "#/definitions/credits"
+        }
+      }
+    },
+    "toc-node": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "$ref": "#/definitions/title"
+        },
+        "url": {
+          "title": "URL",
+          "$ref": "#/definitions/link.schema.json"
+        },
+        "children": {
+          "title": "Children",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/toc-node"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "toc": {
+          "$ref": "#/definitions/toc-node"
+        },
+        "toc-brief": {
+          "$ref": "#/definitions/toc-node"
+        },
+        "landmarks": {
+          "$ref": "#/definitions/toc-node"
+        },
+        "loa": {
+          "title": "List Of Audio",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link.schema.json"
+          }
+        },
+        "lov": {
+          "title": "List Of Video",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link.schema.json"
+          }
+        },
+        "loi": {
+          "title": "List Of Images",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link.schema.json"
+          }
+        },
+        "lot": {
+          "title": "List Of Tables",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link.schema.json"
+          }
+        },
+        "page-list": {
+          "title": "List Of Pages",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "number": {
+                "type": "integer"
+              },
+              "title": {
+                "$ref": "#/definitions/title"
+              }
+            }
+          }
+        }
+      }
+    },
+    "chapter": {
+      "title": "Chapter",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Chapter Title",
+          "type": "object",
+          "properties": {
+            "label": {
+              "const": "chapter"
+            },
+            "ordinal": {
+              "title": "Ordinal",
+              "type": "integer"
+            },
+            "subtitle": {
+              "title": "Subtitle",
+              "type": "string"
+            }
+          }
+        },
+        "sections": {
+          "title": "sections",
+          "description": "Sections",
+          "type": "array",
+          "items": {
+            "title": "Section",
+            "$ref": "#/definitions/content"
+          }
+        },
+        "footnotes": {
+          "$ref": "#/definitions/footnotes"
+        }
+      }
+    },
+    "part": {
+      "title": "Part",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Part Title",
+          "type": "object",
+          "properties": {
+            "label": {
+              "const": "part"
+            },
+            "ordinal": {
+              "title": "Ordinal",
+              "type": "integer"
+            },
+            "subtitle": {
+              "title": "Subtitle",
+              "type": "string"
+            }
+          }
+        },
+        "chapters": {
+          "title": "Chapters",
+          "type": "array",
+          "items": {
+            "title": "Chapter",
+            "$ref": "#/definitions/chapter"
+          }
+        },
+        "footnotes": {
+          "$ref": "#/definitions/footnotes"
+        }
+      }
+    },
+    "volume": {
+      "title": "Volume",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Volume Title",
+          "type": "object",
+          "properties": {
+            "label": {
+              "const": "volume"
+            },
+            "ordinal": {
+              "title": "Ordinal",
+              "type": "integer"
+            },
+            "subtitle": {
+              "title": "Subtitle",
+              "type": "string"
+            }
+          }
+        },
+        "parts": {
+          "title": "Parts",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/part"
+          }
+        }
+      },
+      "$ref": "#/definitions/content"
+    },
+    "biblioentry": {
+      "title": "Bibliographic entry",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "partitions": {
+      "type": "array",
+      "items": [
+        {
+          "title": "cover",
+          "description": "Cover - A section that introduces the work, often consisting of a marketing image, the title, author and publisher, and select quotes and reviews.",
+          "type": "object",
+          "properties": {
+            "covertitle": {
+              "$ref": "#/definitions/title"
+            },
+            "author": {
+              "$ref": "#/definitions/credits"
+            },
+            "publisher": {
+              "$ref": "#/definitions/credits"
+            },
+            "pullquote": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/quote"
+              }
+            }
+          }
+        },
+        {
+          "description": "Front-matter",
+          "title": "frontmatter",
+          "type": "array",
+          "items": [
+            {
+              "description": "Half-Title page",
+              "title": "halftitlepage",
+              "type": "object",
+              "properties": {
+                "halftitle": {
+                  "$ref": "#/definitions/title"
+                }
+              }
+            },
+            {
+              "description": "Title page",
+              "title": "titlepage",
+              "type": "object",
+              "properties": {
+                "fulltitle": {
+                  "$ref": "#/definitions/title"
+                },
+                "subtitle": {
+                  "$ref": "#/definitions/title"
+                },
+                "author": {
+                  "$ref": "#/definitions/credits"
+                },
+                "publisher": {
+                  "$ref": "#/definitions/credits"
+                }
+              }
+            },
+            {
+              "title": "seriespage",
+              "description": "Series page",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/biblioentry"
+              }
+            },
+            {
+              "title": "copyright-page",
+              "description": "Copyright page",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/legal-notes"
+              }
+            },
+            {
+              "title": "imprimatur",
+              "description": "Imprimatur",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/legal-notes"
+              }
+            },
+            {
+              "title": "imprint",
+              "description": "Imprint",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/content"
+              }
+            },
+            {
+              "title": "contributors",
+              "description": "Contributors",
+              "$ref": "#/definitions/credits"
+            },
+            {
+              "title": "acknowledgments",
+              "description": "acknowledgments",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "$ref": "#/definitions/text"
+                  },
+                  "contributor": {
+                    "$ref": "#/definitions/contributor.schema.json"
+                  }
+                }
+              }
+            },
+            {
+              "title": "other-credits",
+              "description": "Credits",
+              "type": "object",
+              "properties": {
+                "illustrations": {
+                  "$ref": "#/definitions/credits"
+                },
+                "quotes": {
+                  "$ref": "#/definitions/credits"
+                },
+                "previously-published": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/biblioentry"
+                  }
+                }
+              }
+            },
+            {
+              "title": "errata",
+              "description": "Errata",
+              "$ref": "#/definitions/list"
+            },
+            {
+              "title": "revision-history",
+              "description": "Revision History",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "date": {
+                  "title": "Date",
+                  "type": "string",
+                  "anyOf": [
+                    {
+                      "title": "Date",
+                      "format": "date"
+                    },
+                    {
+                      "title": "Date with time",
+                      "format": "date-time"
+                    }
+                  ]
+                },
+                "concluding-sentence": {
+                  "title": "Revision",
+                  "$ref": "#/definitions/text"
+                }
+              }
+            },
+            {
+              "title": "dedication",
+              "description": "Dedication",
+              "type": "array",
+              "items": {
+                "text": {
+                  "$ref": "#/definitions/text"
+                },
+                "contributor": {
+                  "$ref": "#/definitions/contributor.schema.json"
+                }
+              }
+            },
+            {
+              "title": "annotation",
+              "$ref": "#/definitions/list"
+            }
+          ]
+        },
+        {
+          "title": "bodymatter",
+          "description": "Body-matter",
+          "type": "array",
+          "items": [
+            {
+              "title": "abstract",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "synopsis",
+              "description": "synopsis: A brief summary of the major points of a written work, either as prose or as a table; an abridgment or condensation of a work.",
+              "$ref": "#/definitions/list"
+            },
+            {
+              "title": "foreword",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "preface",
+              "description": "Preface - Typically by author",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "introduction",
+              "description": "Introduction",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "description": "Preamble",
+              "title": "preamble",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "description": "Epigraph",
+              "title": "epigraph",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "prologue",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "epilogue",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "title": "volumes",
+                    "description": "Volumes",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/volume"
+                    }
+                  },
+                  {
+                    "title": "parts",
+                    "description": "Parts",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/part"
+                    }
+                  },
+                  {
+                    "title": "chapters",
+                    "description": "Chapters",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/chapter"
+                    }
+                  },
+                  {
+                    "title": "sections",
+                    "description": "Sections",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/content"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "conclusion",
+              "description": "Conclusion",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "footnotes",
+              "description": "Foot notes",
+              "$ref": "#/definitions/footnotes"
+            },
+            {
+              "title": "afterword",
+              "description": "Afterword",
+              "$ref": "#/definitions/content"
+            }
+          ]
+        },
+        {
+          "title": "backmatter",
+          "description": "Back-matter",
+          "type": "array",
+          "items": [
+            {
+              "title": "endnotes",
+              "description": "End notes",
+              "$ref": "#/definitions/endnotes"
+            },
+            {
+              "title": "appendix",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "colophon",
+              "$ref": "#/definitions/content"
+            },
+            {
+              "title": "credits",
+              "$ref": "#/definitions/credits"
+            },
+            {
+              "title": "keywords",
+              "type": "array",
+              "items": {
+                "title": "keyword",
+                "$ref": "#/definitions/term"
+              }
+            },
+            {
+              "title": "bibliography",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/biblioentry"
+              }
+            },
+            {
+              "title": "glossary",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "glossterm": {
+                    "$ref": "#/definitions/term"
+                  },
+                  "glossdef": {
+                    "$ref": "#/definitions/content"
+                  }
+                }
+              }
+            },
+            {
+              "title": "index",
+              "description": "Index",
+              "type": "object",
+              "properties": {
+                "index-headnotes": {
+                  "$ref": "#/definitions/title"
+                },
+                "index-legend": {
+                  "$ref": "#/definitions/list"
+                },
+                "index-groups": {
+                  "title": "Index Groups",
+                  "type": "array",
+                  "items": {
+                    "title": "index-group",
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "$ref": "#/definitions/title"
+                      },
+                      "index-entry-list": {
+                        "type": "array",
+                        "items": {
+                          "title": "index-entry",
+                          "type": "object",
+                          "properties": {
+                            "index-term": {
+                              "$ref": "#/definitions/term"
+                            },
+                            "index-editor-note": {
+                              "$ref": "#/definitions/quote"
+                            },
+                            "index-locator-list": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "title": "index-locator-range",
+                                "items": {
+                                  "$ref": "#/definitions/locator.schema.json"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

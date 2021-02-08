@@ -1,0 +1,1563 @@
+{
+  "partitions": {
+    "title": "Document partitions",
+    "id": "partitions",
+    "about": "#partitions",
+    "typeof": "rdf:Bag",
+    "values": {
+      "cover": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "cover",
+        "typeof": "rdf:Property",
+        "title": "cover",
+        "status": "stable",
+        "description": "A section that introduces the work, often consisting of a marketing image, the title, author and publisher, and select quotes and reviews. ,"
+      },
+      "frontmatter": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "frontmatter",
+        "typeof": "rdf:Property",
+        "title": "frontmatter",
+        "status": "stable",
+        "description": "Preliminary material to the main content of a publication, such as tables of contents, dedications, etc. ,"
+      },
+      "bodymatter": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "bodymatter",
+        "typeof": "rdf:Property",
+        "title": "bodymatter",
+        "status": "stable",
+        "description": "The main content of a publication. ,"
+      },
+      "backmatter": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "backmatter",
+        "typeof": "rdf:Property",
+        "title": "backmatter",
+        "status": "stable",
+        "description": "Ancillary material occurring after the main content of a publication, such as indices, appendices, etc. ,"
+      }
+    }
+  },
+  "divisions": {
+    "title": "Document divisions",
+    "id": "divisions",
+    "about": "#divisions",
+    "typeof": "rdf:Bag",
+    "values": {
+      "volume": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "volume",
+        "typeof": "rdf:Property",
+        "title": "volume",
+        "status": "stable",
+        "description": "A component of a collection. ,"
+      },
+      "part": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "part",
+        "typeof": "rdf:Property",
+        "title": "part",
+        "status": "stable",
+        "description": "A major structural division in a work that contains a set of related sections dealing with a particular subject, narrative arc or similar encapsulated theme. ,"
+      },
+      "chapter": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "chapter",
+        "typeof": "rdf:Property",
+        "title": "chapter",
+        "status": "stable",
+        "description": "A major thematic section of content in a work. ,"
+      },
+      "subchapter": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "subchapter",
+        "typeof": "rdf:Property",
+        "title": "subchapter",
+        "status": "stable",
+        "description": "A major sub-division of a chapter. ,"
+      },
+      "division": {
+        "context": {
+          "body": {
+            "name": "body",
+            "href": "https://www.w3.org/TR/html/sections.html#the-body-element",
+            "id": "the-body-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "division",
+        "typeof": "rdf:Property",
+        "title": "division",
+        "status": "stable",
+        "description": "A major structural division that may also appear as a substructure of a part (esp. in legislation). ,"
+      }
+    }
+  },
+  "sections": {
+    "title": "Document sections and components",
+    "description": "Sections and components that typically occur in the publication bodymatter.",
+    "id": "sections",
+    "about": "#sections",
+    "typeof": "rdf:Bag",
+    "typicalScope": "bodymatter",
+    "values": {
+      "abstract": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "abstract-1",
+        "typeof": "rdf:Property",
+        "title": "abstract",
+        "status": "stable",
+        "description": "A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt within it. ,",
+        "typicalScope": "bodymatter"
+      },
+      "foreword": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "foreword",
+        "typeof": "rdf:Property",
+        "title": "foreword",
+        "status": "stable",
+        "description": "An introductory section that precedes the work, typically not written by the author of the work. ,",
+        "typicalScope": "bodymatter"
+      },
+      "preface": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "preface",
+        "typeof": "rdf:Property",
+        "title": "preface",
+        "status": "stable",
+        "description": "An introductory section that precedes the work, typically written by the author of the work. ,",
+        "typicalScope": "bodymatter"
+      },
+      "prologue": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "prologue",
+        "typeof": "rdf:Property",
+        "title": "prologue",
+        "status": "stable",
+        "description": "An introductory section that sets the background to a work, typically part of the narrative. ,",
+        "typicalScope": "bodymatter"
+      },
+      "introduction": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "introduction",
+        "typeof": "rdf:Property",
+        "title": "introduction",
+        "status": "stable",
+        "description": "A preliminary section that typically introduces the scope or nature of the work. ,",
+        "typicalScope": "bodymatter"
+      },
+      "preamble": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "preamble",
+        "typeof": "rdf:Property",
+        "title": "preamble",
+        "status": "stable",
+        "description": "A section in the beginning of the work, typically containing introductory and/or explanatory prose regarding the scope or nature of the work's content ,",
+        "typicalScope": "bodymatter"
+      },
+      "conclusion": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "conclusion",
+        "typeof": "rdf:Property",
+        "title": "conclusion",
+        "status": "stable",
+        "description": "A concluding section or statement that summarizes the work or wraps up the narrative. ,",
+        "typicalScope": "bodymatter"
+      },
+      "epilogue": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "epilogue",
+        "typeof": "rdf:Property",
+        "title": "epilogue",
+        "status": "stable",
+        "description": "A concluding section of narrative that wraps up or comments on the actions and events of the work, typically from a future perspective. ,",
+        "typicalScope": "bodymatter"
+      },
+      "afterword": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "afterword",
+        "typeof": "rdf:Property",
+        "title": "afterword",
+        "status": "stable",
+        "description": "A closing statement from the author or a person of importance, typically providing insight into how the content came to be written, its significance, or related events that have transpired since its timeline. ,",
+        "typicalScope": "bodymatter"
+      },
+      "epigraph": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "epigraph",
+        "typeof": "rdf:Property",
+        "title": "epigraph",
+        "status": "stable",
+        "description": "A quotation set at the start of the work or a section that establishes the theme or sets the mood. ,",
+        "typicalScope": "bodymatter"
+      }
+    }
+  },
+  "navigation": {
+    "title": "Document navigation",
+    "id": "navigation",
+    "about": "#navigation",
+    "typeof": "rdf:Bag",
+    "values": {
+      "toc": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "toc-1",
+        "typeof": "rdf:Property",
+        "title": "toc",
+        "status": "stable",
+        "description": "A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it."
+      },
+      "toc-brief": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "toc-brief",
+        "typeof": "rdf:Property",
+        "title": "toc-brief",
+        "status": "stable",
+        "description": "An abridged version of the table of contents."
+      },
+      "landmarks": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "landmarks",
+        "typeof": "rdf:Property",
+        "title": "landmarks",
+        "status": "stable",
+        "description": "A collection of references to well-known/recurring components within the publication"
+      },
+      "loa": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "loa",
+        "typeof": "rdf:Property",
+        "title": "loa",
+        "status": "stable",
+        "description": "A listing of audio clips included in the work."
+      },
+      "loi": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "loi",
+        "typeof": "rdf:Property",
+        "title": "loi",
+        "status": "stable",
+        "description": "A listing of illustrations included in the work."
+      },
+      "lot": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "lot",
+        "typeof": "rdf:Property",
+        "title": "lot",
+        "status": "stable",
+        "description": "A listing of tables included in the work."
+      },
+      "lov": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "lov",
+        "typeof": "rdf:Property",
+        "title": "lov",
+        "status": "stable",
+        "description": "A listing of video clips included in the work."
+      }
+    }
+  },
+  "references": {
+    "title": "Document reference sections",
+    "id": "references",
+    "about": "#references",
+    "typeof": "rdf:Bag",
+    "values": {
+      "appendix": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "appendix",
+        "typeof": "rdf:Property",
+        "title": "appendix",
+        "status": "stable",
+        "description": "A section of supplemental information located after the primary content that informs the content but is not central to it."
+      },
+      "colophon": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "colophon",
+        "typeof": "rdf:Property",
+        "title": "colophon",
+        "status": "stable",
+        "description": "A short section of production notes particular to the edition (e.g., describing the typeface used), often located at the end of a work. ,"
+      },
+      "credits": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "credits",
+        "typeof": "rdf:Property",
+        "title": "credits",
+        "status": "stable",
+        "description": "A collection of . ,"
+      },
+      "keywords": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "keywords",
+        "typeof": "rdf:Property",
+        "title": "keywords",
+        "status": "stable",
+        "description": "A collection of . ,"
+      }
+    }
+  },
+  "preliminary": {
+    "title": "Preliminary sections and components",
+    "description": "Preliminary sections and components, typically occuring in the publication frontmatter.",
+    "id": "preliminary",
+    "about": "#preliminary",
+    "typeof": "rdf:Bag",
+    "typicalScope": "frontmatter",
+    "values": {
+      "titlepage": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "titlepage",
+        "typeof": "rdf:Property",
+        "title": "titlepage",
+        "status": "stable",
+        "description": "The title page of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "halftitlepage": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "halftitlepage",
+        "typeof": "rdf:Property",
+        "title": "halftitlepage",
+        "status": "stable",
+        "description": "The half title page of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "copyright-page": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "copyright-page",
+        "typeof": "rdf:Property",
+        "title": "copyright-page",
+        "status": "stable",
+        "description": "The copyright page of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "seriespage": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "seriespage",
+        "typeof": "rdf:Property",
+        "title": "seriespage ",
+        "status": "stable",
+        "description": "Marketing section used to list related publications. ,",
+        "typicalScope": "frontmatter"
+      },
+      "acknowledgments": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "acknowledgments",
+        "typeof": "rdf:Property",
+        "title": "acknowledgments",
+        "status": "stable",
+        "description": "A section or statement that acknowledges significant contributions by persons, organizations, governments and other entities to the realization of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "imprint": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "imprint",
+        "typeof": "rdf:Property",
+        "title": "imprint",
+        "status": "stable",
+        "description": "Information relating to the publication or distribution of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "imprimatur": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "imprimatur",
+        "typeof": "rdf:Property",
+        "title": "imprimatur",
+        "status": "stable",
+        "description": "A formal statement authorizing the publication of the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "contributors": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "contributors",
+        "typeof": "rdf:Property",
+        "title": "contributors",
+        "status": "stable",
+        "description": "A list of contributors to the work. ,",
+        "typicalScope": "frontmatter"
+      },
+      "other-credits": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "other-credits",
+        "typeof": "rdf:Property",
+        "title": "other-credits",
+        "status": "stable",
+        "description": "Acknowledgments of previously published parts of the work, illustration credits, and permission to quote from copyrighted material. ,",
+        "typicalScope": "frontmatter"
+      },
+      "errata": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "aside": {
+            "name": "aside",
+            "href": "https://www.w3.org/TR/html/sections.html#the-aside-element",
+            "id": "the-aside-element"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "errata",
+        "typeof": "rdf:Property",
+        "title": "errata",
+        "status": "stable",
+        "description": "A set of corrections discovered after initial publication of the work, sometimes referred to as corrigenda. , ,",
+        "typicalScope": "frontmatter"
+      },
+      "dedication": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "dedication",
+        "typeof": "rdf:Property",
+        "title": "dedication",
+        "status": "stable",
+        "description": "An inscription at the front of the work, typically addressed in tribute to one or more persons close to the author. ,",
+        "typicalScope": "frontmatter"
+      },
+      "revision-history": {
+        "context": {
+          "grouping-content": {
+            "name": "grouping content",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#grouping-content",
+            "id": "grouping-content"
+          },
+          "section": {
+            "name": "section",
+            "href": "https://www.w3.org/TR/html/sections.html#the-section-element",
+            "id": "the-section-element"
+          }
+        },
+        "id": "revision-history",
+        "typeof": "rdf:Property",
+        "title": "revision-history",
+        "status": "stable",
+        "description": "A record of changes made to a work. ,",
+        "typicalScope": "frontmatter"
+      }
+    }
+  },
+  "asides": {
+    "title": "Asides",
+    "id": "asides",
+    "about": "#asides",
+    "typeof": "rdf:Bag",
+    "values": {
+      "aside": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "aside",
+        "typeof": "rdf:Property",
+        "title": "aside",
+        "status": "stable",
+        "description": "Secondary or supplementary content. Not Allowed Identifies a or as an escapable or skippable aside."
+      }
+    }
+  },
+  "titles": {
+    "title": "Titles and headings",
+    "id": "titles",
+    "about": "#titles",
+    "typeof": "rdf:Bag",
+    "values": {
+      "halftitle": {
+        "context": {
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          }
+        },
+        "id": "halftitle",
+        "typeof": "rdf:Property",
+        "title": "halftitle",
+        "status": "stable",
+        "description": "The title appearing on the first page of a work or immediately before the text. . This property should only appear once within the document scope."
+      },
+      "fulltitle": {
+        "context": {
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          }
+        },
+        "id": "fulltitle",
+        "typeof": "rdf:Property",
+        "title": "fulltitle",
+        "status": "stable",
+        "description": "The full title of the work, either simple, in which case it is identical to , or compound, in which case it consists of a and a . . This property should only appear once within the document scope."
+      },
+      "covertitle": {
+        "context": {
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          }
+        },
+        "id": "covertitle",
+        "typeof": "rdf:Property",
+        "title": "covertitle",
+        "status": "stable",
+        "description": "The title of the work as displayed on the work's cover. . This property should only appear once within the document scope."
+      },
+      "title": {
+        "context": {
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          },
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "title",
+        "typeof": "rdf:Property",
+        "title": "title",
+        "status": "stable",
+        "description": "The primary name of a document component, such as a list, table or figure. , descendants of ."
+      },
+      "subtitle": {
+        "context": {
+          "divs": {
+            "name": "divs",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-div-element",
+            "id": "the-div-element"
+          },
+          "paragraphs": {
+            "name": "paragraphs",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-p-element",
+            "id": "the-p-element"
+          },
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          },
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "subtitle",
+        "typeof": "rdf:Property",
+        "title": "subtitle",
+        "status": "stable",
+        "description": "An explanatory or alternate title for the work, or a section or component within it. , descendants of , ,"
+      },
+      "label": {
+        "context": {
+          "figcaption": {
+            "name": "figcaption",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-figcaption-element",
+            "id": "the-figcaption-element"
+          },
+          "li": {
+            "name": "li",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-li-element",
+            "id": "the-li-element"
+          },
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          },
+          "Phrasing-content": {
+            "name": "Phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "label",
+        "typeof": "rdf:Property",
+        "title": "label",
+        "status": "stable",
+        "description": "The text label that precedes an in a component title (e.g., 'Chapter', 'Part', 'Figure', 'Table'). descendants of , and"
+      },
+      "ordinal": {
+        "context": {
+          "figcaption": {
+            "name": "figcaption",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-figcaption-element",
+            "id": "the-figcaption-element"
+          },
+          "li": {
+            "name": "li",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-li-element",
+            "id": "the-li-element"
+          },
+          "heading-content": {
+            "name": "heading content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-heading-content",
+            "id": "kinds-of-content-heading-content"
+          },
+          "Phrasing-content": {
+            "name": "Phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "ordinal",
+        "typeof": "rdf:Property",
+        "title": "ordinal",
+        "status": "stable",
+        "description": "An ordinal specifier for a component in a sequence of components (e.g., '1', 'IV', 'B-1'). descendants of , and"
+      },
+      "bridgehead": {
+        "context": {
+          "span": {
+            "name": "span",
+            "href": "https://www.w3.org/TR/html/textlevel-semantics.html#the-span-element",
+            "id": "the-span-element"
+          },
+          "div": {
+            "name": "div",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-div-element",
+            "id": "the-div-element"
+          },
+          "p": {
+            "name": "p",
+            "href": "https://www.w3.org/TR/html/grouping-content.html#the-p-element",
+            "id": "the-p-element"
+          },
+          "flow-content": {
+            "name": "flow content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content",
+            "id": "kinds-of-content-flow-content"
+          }
+        },
+        "id": "bridgehead",
+        "typeof": "rdf:Property",
+        "title": "bridgehead",
+        "status": "stable",
+        "description": "A structurally insignificant heading that does not contribute to the hierarchical structure of the work. , typically , or"
+      }
+    }
+  },
+  "comics": {
+    "title": "Comics",
+    "id": "comics",
+    "about": "#comics",
+    "typeof": "rdf:Bag",
+    "values": {
+      "panel": {
+        "context": {
+          "EPUB-Region-Based-Navigation": {
+            "name": "EPUB Region-Based Navigation",
+            "href": "http://www.idpf.org/epub/renditions/region-nav",
+            "id": "http://www.idpf.org/epub/renditions/region-nav"
+          }
+        },
+        "id": "panel",
+        "typeof": "rdf:Property",
+        "title": "panel",
+        "status": "stable",
+        "description": "An individual frame, or drawing."
+      },
+      "panel-group": {
+        "context": {
+          "EPUB-Region-Based-Navigation": {
+            "name": "EPUB Region-Based Navigation",
+            "href": "http://www.idpf.org/epub/renditions/region-nav",
+            "id": "http://www.idpf.org/epub/renditions/region-nav"
+          }
+        },
+        "id": "panel-group",
+        "typeof": "rdf:Property",
+        "title": "panel-group",
+        "status": "stable",
+        "description": "A group of (e.g., a strip)."
+      },
+      "balloon": {
+        "context": {
+          "EPUB-Region-Based-Navigation": {
+            "name": "EPUB Region-Based Navigation",
+            "href": "http://www.idpf.org/epub/renditions/region-nav",
+            "id": "http://www.idpf.org/epub/renditions/region-nav"
+          }
+        },
+        "id": "balloon",
+        "typeof": "rdf:Property",
+        "title": "balloon",
+        "status": "stable",
+        "description": "An area in a comic that contains the words, spoken or thought, of a character."
+      },
+      "text-area": {
+        "context": {
+          "EPUB-Region-Based-Navigation": {
+            "name": "EPUB Region-Based Navigation",
+            "href": "http://www.idpf.org/epub/renditions/region-nav",
+            "id": "http://www.idpf.org/epub/renditions/region-nav"
+          }
+        },
+        "id": "text-area",
+        "typeof": "rdf:Property",
+        "title": "text-area",
+        "status": "stable",
+        "description": "An area of text in a comic . Used to represent titles, narrative text, character dialogue (inside a or not) and similar."
+      },
+      "sound-area": {
+        "context": {
+          "EPUB-Region-Based-Navigation": {
+            "name": "EPUB Region-Based Navigation",
+            "href": "http://www.idpf.org/epub/renditions/region-nav",
+            "id": "http://www.idpf.org/epub/renditions/region-nav"
+          }
+        },
+        "id": "sound-area",
+        "typeof": "rdf:Property",
+        "title": "sound-area",
+        "status": "stable",
+        "description": "An area of text in a comic that represents a sound."
+      }
+    }
+  },
+  "notes": {
+    "title": "Notes and annotations",
+    "id": "notes",
+    "about": "#notes",
+    "typeof": "rdf:Bag",
+    "values": {
+      "annotation": {
+        "context": {},
+        "id": "annotation",
+        "typeof": "rdf:Property",
+        "title": "annotation",
+        "status": "stable",
+        "description": "Explanatory information about passages in the work. ,"
+      },
+      "note": {
+        "context": {},
+        "id": "note",
+        "typeof": "rdf:Property",
+        "title": "note",
+        "status": "stable",
+        "description": "A note. This property does not carry spatial positioning semantics, as do the and properties. It can be used to identify footnotes, endnotes, marginal notes, inline notes, and similar when legacy naming conventions are not desired. On the element when identifying a single note, or on descendants of sectioning content when identifying individual notes in a group (refer to and )."
+      },
+      "footnote": {
+        "context": {
+          "endnotes": {
+            "name": "endnotes",
+            "href": "#endnotes",
+            "id": "endnotes"
+          },
+          "footnotes": {
+            "name": "footnotes",
+            "href": "#footnotes",
+            "id": "footnotes"
+          },
+          "aside": {
+            "name": "aside",
+            "href": "https://www.w3.org/TR/html/sections.html#the-aside-element",
+            "id": "the-aside-element"
+          }
+        },
+        "id": "footnote",
+        "typeof": "rdf:Property",
+        "title": "footnote",
+        "status": "stable",
+        "description": "Ancillary information, such as a citation or commentary, that provides additional context to a referenced passage of text. On the element when identifying a single footnote, or on descendants of sectioning content when identifying individual footnotes in a group (refer to and )."
+      },
+      "endnote": {
+        "context": {
+          "endnotes": {
+            "name": "endnotes",
+            "href": "#endnotes",
+            "id": "endnotes"
+          },
+          "footnotes": {
+            "name": "footnotes",
+            "href": "#footnotes",
+            "id": "footnotes"
+          },
+          "aside": {
+            "name": "aside",
+            "href": "https://www.w3.org/TR/html/sections.html#the-aside-element",
+            "id": "the-aside-element"
+          }
+        },
+        "id": "endnote",
+        "typeof": "rdf:Property",
+        "title": "endnote",
+        "status": "stable",
+        "description": "One of a collection of notes that occur at the end of a work, or a section within it, that provides additional context to a referenced passage of text. On the element when identifying a single endnote, or on descendants of sectioning content when identifying individual endnotes in a group (refer to and )."
+      },
+      "rearnote": {
+        "context": {},
+        "id": "rearnote",
+        "typeof": "rdf:Property",
+        "title": "rearnote",
+        "status": "stable",
+        "description": "A note appearing in the rear (backmatter) of the work, or at the end of a section. On the element when identifying a single rearnote, or on descendants of sectioning content when identifying individual rearnotes in a group (refer to and ).",
+        "typicalScope": "backmatter"
+      },
+      "footnotes": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "footnotes",
+        "typeof": "rdf:Property",
+        "title": "footnotes",
+        "status": "stable",
+        "description": "A collection of ."
+      },
+      "endnotes": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "endnotes",
+        "typeof": "rdf:Property",
+        "title": "endnotes",
+        "status": "stable",
+        "description": "A collection of notes at the end of a work or a section within it."
+      },
+      "rearnotes": {
+        "context": {},
+        "id": "rearnotes",
+        "typeof": "rdf:Property",
+        "title": "rearnotes",
+        "status": "stable",
+        "description": "A collection of notes appearing at the rear (backmatter) of the work, or at the end of a section.",
+        "typicalScope": "backmatter"
+      }
+    }
+  },
+  "links": {
+    "title": "References",
+    "id": "links",
+    "about": "#links",
+    "typeof": "rdf:Bag",
+    "values": {
+      "annoref": {
+        "context": {},
+        "id": "annoref",
+        "typeof": "rdf:Property",
+        "title": "annoref",
+        "status": "stable",
+        "description": "A reference to an annotation."
+      },
+      "biblioref": {
+        "context": {
+          "a": {
+            "name": "a",
+            "href": "https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element",
+            "id": "the-a-element"
+          }
+        },
+        "id": "biblioref",
+        "typeof": "rdf:Property",
+        "title": "biblioref",
+        "status": "stable",
+        "description": "A reference to a ."
+      },
+      "glossref": {
+        "context": {
+          "a": {
+            "name": "a",
+            "href": "https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element",
+            "id": "the-a-element"
+          }
+        },
+        "id": "glossref",
+        "typeof": "rdf:Property",
+        "title": "glossref",
+        "status": "stable",
+        "description": "A reference to a ."
+      },
+      "noteref": {
+        "context": {
+          "a": {
+            "name": "a",
+            "href": "https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element",
+            "id": "the-a-element"
+          }
+        },
+        "id": "noteref",
+        "typeof": "rdf:Property",
+        "title": "noteref",
+        "status": "stable",
+        "description": "A reference to a note, typically appearing as a superscripted number or symbol in the main body of text."
+      },
+      "backlink": {
+        "context": {
+          "a": {
+            "name": "a",
+            "href": "https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element",
+            "id": "the-a-element"
+          }
+        },
+        "id": "backlink",
+        "typeof": "rdf:Property",
+        "title": "backlink",
+        "status": "stable",
+        "description": "A link that allows the user to return to a related location in the content (e.g., from a to its reference or from a to where a is used)."
+      }
+    }
+  },
+  "document-text": {
+    "title": "Document text",
+    "description": "Terms for describing components at the phrasing level.",
+    "id": "document-text",
+    "about": "#document-text",
+    "typeof": "rdf:Bag",
+    "values": {
+      "credit": {
+        "context": {
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "credit",
+        "typeof": "rdf:Property",
+        "title": "credit",
+        "status": "stable",
+        "description": "An acknowledgment of the source of integrated content from third-party sources, such as photos. Typically identifies the creator, copyright and any restrictions on reuse."
+      },
+      "keyword": {
+        "context": {
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "keyword",
+        "typeof": "rdf:Property",
+        "title": "keyword",
+        "status": "stable",
+        "description": "A key word or phrase."
+      },
+      "topic-sentence": {
+        "context": {
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "topic-sentence",
+        "typeof": "rdf:Property",
+        "title": "topic-sentence",
+        "status": "stable",
+        "description": "A phrase or sentence serving as an introductory summary of the containing paragraph."
+      },
+      "concluding-sentence": {
+        "context": {
+          "phrasing-content": {
+            "name": "phrasing content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "concluding-sentence",
+        "typeof": "rdf:Property",
+        "title": "concluding-sentence",
+        "status": "stable",
+        "description": "A phrase or sentence serving as a concluding summary of the containing paragraph."
+      }
+    }
+  },
+  "pagination": {
+    "title": "Pagination",
+    "id": "pagination",
+    "about": "#pagination",
+    "typeof": "rdf:Bag",
+    "values": {
+      "pagebreak": {
+        "context": {
+          "flow": {
+            "name": "flow",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-flow-content",
+            "id": "kinds-of-content-flow-content"
+          },
+          "phrasing": {
+            "name": "phrasing",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-phrasing-content",
+            "id": "kinds-of-content-phrasing-content"
+          }
+        },
+        "id": "pagebreak",
+        "typeof": "rdf:Property",
+        "title": "pagebreak",
+        "status": "stable",
+        "description": "A separator denoting the position before which a break occurs between two contiguous pages in a statically paginated version of the content. and content, where the value of the carrying elements title attribute takes precedence over element content for the purposes of representing the pagebreak value"
+      },
+      "page-list": {
+        "context": {
+          "sectioning-content": {
+            "name": "sectioning content",
+            "href": "https://www.w3.org/TR/html/dom.html#kinds-of-content-sectioning-content",
+            "id": "kinds-of-content-sectioning-content"
+          }
+        },
+        "id": "page-list",
+        "typeof": "rdf:Property",
+        "title": "page-list",
+        "status": "stable",
+        "description": "A navigational aid that provides a list of links to the in the content."
+      }
+    }
+  },
+  "tables": {
+    "title": "Tables",
+    "id": "tables",
+    "about": "#tables",
+    "typeof": "rdf:Bag",
+    "values": {
+      "table": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "table",
+        "typeof": "rdf:Property",
+        "title": "table",
+        "status": "stable",
+        "description": "A structure containing data or content laid out in tabular form. Not Allowed Identifies a or as an escapable or skippable table structure."
+      },
+      "table-row": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "table-row",
+        "typeof": "rdf:Property",
+        "title": "table-row",
+        "status": "stable",
+        "description": "A row of data or content in a tabular structure. Not Allowed Identifies a or as an escapable or skippable table row."
+      },
+      "table-cell": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "table-cell",
+        "typeof": "rdf:Property",
+        "title": "table-cell",
+        "status": "stable",
+        "description": "A single cell of tabular data or content. Not Allowed Identifies a or as an escapable or skippable table cell."
+      }
+    }
+  },
+  "lists": {
+    "title": "Lists",
+    "id": "lists",
+    "about": "#lists",
+    "typeof": "rdf:Bag",
+    "values": {
+      "list": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "list",
+        "typeof": "rdf:Property",
+        "title": "list",
+        "status": "stable",
+        "description": "A structure that contains an enumeration of related content items. Not Allowed Identifies a or as an escapable or skippable list structure."
+      },
+      "list-item": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "list-item",
+        "typeof": "rdf:Property",
+        "title": "list-item",
+        "status": "stable",
+        "description": "A single item in an enumeration. Not Allowed Identifies a or as an escapable or skippable list item."
+      }
+    }
+  },
+  "figures": {
+    "title": "Figures",
+    "id": "figures",
+    "about": "#figures",
+    "typeof": "rdf:Bag",
+    "values": {
+      "figure": {
+        "context": {
+          "par": {
+            "name": "par",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-par-elem",
+            "id": "sec-smil-par-elem"
+          },
+          "seq": {
+            "name": "seq",
+            "href": "http://www.idpf.org/epub/latest/mediaoverlays#sec-smil-seq-elem",
+            "id": "sec-smil-seq-elem"
+          }
+        },
+        "id": "figure",
+        "typeof": "rdf:Property",
+        "title": "figure",
+        "status": "stable",
+        "description": "An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits. Not Allowed Identifies a or as an escapable or skippable figure."
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="datatype.ID">
+    <xs:restriction base="datatype.ID.lexical"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.IDREF">
+    <xs:restriction base="datatype.IDREF.lexical"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.IDREFS">
+    <xs:restriction base="datatype.IDREFS.lexical"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.languagecode">
+    <xs:restriction base="datatype.BCP47"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#language -->
+  <xs:simpleType name="datatype.BCP47">
+    <xs:restriction base="xs:language">
+      <xs:pattern value="[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#ID  -->
+  <xs:simpleType name="datatype.ID.xsd">
+    <xs:restriction base="xs:ID"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#NCName -->
+  <xs:simpleType name="datatype.IDREF.lexical">
+    <xs:restriction base="xs:NCName"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.IDREFS.lexical">
+    <xs:restriction>
+      <xs:simpleType>
+        <xs:list itemType="datatype.IDREF.lexical"/>
+      </xs:simpleType>
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.ID.lexical">
+    <xs:restriction base="xs:NCName"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#IDREF -->
+  <xs:simpleType name="datatype.IDREF.xsd">
+    <xs:restriction base="xs:IDREF"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#IDREFS -->
+  <xs:simpleType name="datatype.IDREFS.xsd">
+    <xs:restriction base="xs:IDREFS"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#NMTOKEN -->
+  <xs:simpleType name="datatype.NMTOKEN">
+    <xs:restriction base="xs:NMTOKEN"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#NMTOKENS  -->
+  <xs:simpleType name="datatype.NMTOKENS">
+    <xs:restriction base="xs:NMTOKENS"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#string -->
+  <xs:simpleType name="datatype.string">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.string.nonempty">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#nt-dateRep -->
+  <xs:simpleType name="datatype.date">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#nt-dateTimeRep -->
+  <xs:simpleType name="datatype.dateTime">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#nt-timeRep -->
+  <xs:simpleType name="datatype.date.or.dateTime">
+    <xs:union memberTypes="datatype.date datatype.dateTime"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.LEIRI">
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <!--
+    http://www.w3.org/TR/xmlschema11-2/#anyURI
+    http://tools.ietf.org/html/rfc3986#appendix-B
+    http://www.w3.org/TR/html5/urls.html#valid-url-potentially-surrounded-by-spaces  
+  -->
+  <xs:simpleType name="datatype.URI">
+    <xs:restriction base="xs:anyURI"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.URI.absolute">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\c+:.+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.IRI">
+    <xs:restriction base="datatype.URI"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.character.encoding">
+    <xs:restriction base="datatype.iana.charset"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.iana.charset">
+    <xs:restriction base="xs:NMTOKEN"/>
+  </xs:simpleType>
+  <!--
+    http://www.w3.org/TR/html5/infrastructure.html#valid-mime-type
+    http://tools.ietf.org/html/rfc4288#section-4.2
+    http://tools.ietf.org/html/rfc2616#section-3.7
+  -->
+  <xs:simpleType name="datatype.mimetype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9!#$&amp;+\-\^_]+/[a-zA-Z0-9!#$&amp;+\-\^_]+.*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.mimetype.nocharset">
+    <xs:restriction base="datatype.mimetype"/>
+  </xs:simpleType>
+  <!--
+    http://www.w3.org/TR/xmlschema11-2/#nonNegativeInteger
+    http://www.w3.org/TR/html5/common-microsyntaxes.html#non-negative-integers
+  -->
+  <xs:simpleType name="datatype.non-negative.integer">
+    <xs:restriction base="xs:nonNegativeInteger"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#positiveInteger -->
+  <xs:simpleType name="datatype.positive.integer">
+    <xs:restriction base="xs:positiveInteger"/>
+  </xs:simpleType>
+  <!-- http://www.w3.org/TR/xmlschema11-2/#integer  -->
+  <xs:simpleType name="datatype.integer">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <!--
+    http://www.w3.org/TR/xmlschema11-2/#nt-floatRep
+    http://www.w3.org/TR/html5/common-microsyntaxes.html#real-numbers
+  -->
+  <xs:simpleType name="datatype.float">
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.float.positive">
+    <xs:restriction base="xs:float">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.float.non-negative">
+    <xs:restriction base="xs:float">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.token">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^\s]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.space.separated.tokens">
+    <xs:list itemType="datatype.token"/>
+  </xs:simpleType>
+  <!--
+    http://www.w3.org/TR/smil/smil-timing.html#TimingSyntax-Full-clock-value
+    http://www.w3.org/TR/smil/smil-timing.html#TimingSyntax-Partial-clock-value
+    http://www.w3.org/TR/smil/smil-timing.html#TimingSyntax-Timecount-value
+  -->
+  <xs:simpleType name="datatype.smil.npt">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(\s*)([0-9]+:)?[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(\s*)"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(\s*)[0-9]+(\.[0-9]+)?(h|min|s|ms)?(\s*)"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.property">
+    <xs:restriction base="xs:NMTOKEN"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.properties">
+    <xs:restriction base="xs:NMTOKENS"/>
+  </xs:simpleType>
+  <!-- \s*([\i-[:]][\c-[:]]*: +[^ ]+)(\s+[\i-[:]][\c-[:]]*: +[^ ]+)*\s* -->
+  <!-- http://www.w3.org/TR/speech-synthesis11/#edef_phoneme -->
+  <xs:simpleType name="datatype.ssml.PhoneticExpression">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="datatype.ssml.PhoneticAlphabet">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(ipa|x-.+)"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

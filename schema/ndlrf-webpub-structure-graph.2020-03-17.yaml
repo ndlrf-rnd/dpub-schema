@@ -1,0 +1,244 @@
+
+  contributor:
+    subject:
+      person:
+      organisation:
+      government:
+      animal:
+      object:
+      entity:
+
+  text:
+    paragraph:
+      paragraph:
+        sentence:
+        topic-sentence:
+        concluding-sentence:
+
+  table:
+    - table-row:
+      - table-cell:
+
+  figure:
+    image:
+    figcaption:
+      label: 'Figure'
+      ordinal: An ordinal specifier for a component in a sequence of components (e.g., '1', 'IV', 'B-1').
+      subtitle: An explanatory or alternate title for the work, or a section or component within it.
+      credits:
+        - credit:
+
+  list:
+    list-item:
+      content:
+
+
+#  aside:
+#    content:
+  credit:
+    contributors:
+      - contributor:
+    copyright:
+      - legal-note:
+    restriction-on-reuse:
+      - legal-note:
+
+  quote:
+    text:
+    credit:
+
+
+  term:
+    - string:
+      phrase:
+      glyph:
+      image:
+
+#      string:
+  content:
+    keywords:
+      keyword:
+        term:
+    text:
+    title: # and figcaption
+      text: title matter
+      label: ['Chapter', 'Part', 'Table']
+      ordinal: An ordinal specifier for a component in a sequence of components (e.g., '1', 'IV', 'B-1').
+      subtitle: An explanatory or alternate title for the work, or a section or component within it.
+      credits: # An acknowledgment of the source of integrated content from third-party sources, such as photos. Typically identifies the creator, copyright and any restrictions on reuse.
+    bridgehead:
+    reference:
+      - noteref -> footnote
+                -> endnote
+      - biblioref -> biblioentry
+    figure:
+    table:
+
+  navigation:
+    toc:
+    toc-brief:
+    landmarks:
+    loa:
+      audio:
+    lov:
+      video:
+    loi:
+      figure:
+    lot:
+      table:
+    page-list:
+      page:
+        number:
+        note:
+  partitions:
+#    subtitle, author, publisher and edition
+#    Title of the Book
+#    Subtitle of the Book (if there is on)
+#    Author Name
+#    Publishing Company
+#    (https://www.diggypod.com/blog/pub-content/uploads/full-title-page.png)
+    cover: A section that introduces the work, often consisting of a marketing image, the title, author and publisher, and select quotes and reviews.
+      covertitle:
+        title:
+      author:
+        - credit:
+      publisher:
+        - credit
+      pullquote:
+        - quote:
+
+    front-matter:
+      halftitlepage:
+        halftitle:
+          title:
+      titlepage:
+        fulltitle:
+          title:
+        subtitle:
+          title:
+        author:
+          credit:
+        publisher:
+          credit:
+      seriespage:
+        - biblioref: [related publications for marketing purposes]
+      copyright-page:
+        list:
+          credit:
+      imprimatur:
+        list:
+          paragraph:
+      imprint:
+
+      contributors:
+        credit:
+      acknowledgments: # page
+        - text:
+          person:
+      credits: # page
+        - illustrations:
+        - biblioentry: previously published parts
+        - quote: permission to quote from copyrighted material:
+      errata:
+        list:
+      dedication:
+        - person:
+          text:
+      revision-history:
+        list:
+          date:
+          concluding-sentence:
+    annotation:
+      - http://idpf.org/epub/oa/
+    bodymatter:
+      # https://wikidiff.com/summary/synopsis:
+      # synopsis: A brief summary of the major points of a written work, either as prose or as a table; an abridgment or condensation of a work.
+
+      abstract: # summary: An abstract or a condensed presentation of the substance of a body of material.
+        content:
+      synopsis:
+        list:
+          content: # synopsis: A brief summary of the major points of a written work, either as prose or as a table; an abridgment or condensation of a work.
+
+      foreword:
+        content:
+        credit:
+
+      preface:
+        content:
+        # typically by author
+      introduction:
+        content:
+
+      preamble:
+        content:
+
+      epigraph:
+        content:
+
+      narrative:
+        prologue:
+          content:
+        epilogue:
+          content:
+        division:
+          volume:
+            part:
+              chapter:
+                section:
+                  content:
+        conclusion:
+          content:
+      footnotes:
+        footnote:
+          content:
+      afterword:
+        content:
+        credit:
+
+    backmatter:
+      endnotes:
+        endnote:
+
+      reference:
+        appendix:
+          - text:
+        colophon:
+          - text:
+        credits:
+        keywords:
+          keyword:
+            - term:
+
+      bibliography:
+        - biblioentry: A single reference to an external source in a bibliography. A biblioentry typically provides more detailed information than its reference(s) in the content (e.g., full title, author(s), publisher, publication date, etc.).
+
+      glossary:
+        glossterm: # dt
+          term:
+        glossdef:
+          content:
+
+
+      index: # http://idpf.org/epub/idx/epub-indexes.html#bb-xref-related
+        index-headnotes:
+        index-legend:
+        - index-group:
+          - index-entry-list:
+              - index-entry:
+                  - index-term:
+                      term:
+                    index-editor-note:
+                      content:
+                    index-locator-list:
+                      - index-locator-range:
+                          start:
+                            index-locator:
+                          end:
+                            index-locator:
+                    index-xref-preferred:
+                      index-term-categories:
+                        index-term-category:
+                    index-xref-related:
+                      index-term-categories:
+                        index-term-category:

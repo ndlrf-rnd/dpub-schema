@@ -1,0 +1,222 @@
+{
+    "id": "http://www.idpf.org/epub/oa/1.0/schema.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title" : "Open Annotation in EPUB Schema",
+    "description": "A strict schema for the annotation patterns in EPUB",
+    "type": "object",
+
+    "properties": {
+    	"@context": {"enum": ["http://www.idpf.org/epub/oa/1.0/context.json"]},
+        "@id" : {"type": "string", "format":"uri"},
+        "@type" : {"enum": ["epub:AnnotationCollection"]},
+        "annotations" : {"type":"array", "items": {"$ref":"#/definitions/Annotation"}},    	
+
+        "dc:created" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dc:creator" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dc:description" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dc:language" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dcterms:modified" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dc:publisher" : {"$ref" : "#/definitions/literalOrListOfLiterals"}, 
+        "dc:rights" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+        "dc:title" : {"$ref" : "#/definitions/literalOrListOfLiterals"}
+    },
+    "required": ["@context", "@id", "@type", "annotations"],
+    "additionalProperties" : false,
+
+    "definitions" : {
+		"Annotation": {
+			"title": "Annotation Schema",
+			"type":"object",
+			"properties": {
+				"@id" : {"type": "string", "format":"uri"},
+				"@type" : {"enum": ["oa:Annotation"]},
+				"hasTarget" : {"$ref": "#/definitions/targetOrList"},
+				"hasBody" : {"$ref": "#/definitions/Body"},
+				"styledBy" : {"$ref": "#/definitions/Style"},
+				"motivatedBy" : {"$ref": "#/definitions/uriOrListOfUrisNotResource"},
+				"annotatedBy" : {"$ref": "#/definitions/resourceOrList"},
+				"annotatedAt" : {"type":"string"},
+				"generatedBy" : {"$ref": "#/definitions/resourceOrList"},
+				"generatedAt" : {"type":"string"},
+				"audience" : {"$ref": "#/definitions/resourceOrList"}
+			},   
+			"required" : ["@id", "@type", "hasTarget"],
+    		"additionalProperties" : false
+		},
+
+		"targetOrList": {			
+			"title": "Target or List of Targets Switch",
+			"anyOf": [
+			    {"$ref": "#/definitions/uriOrCompactIri"},
+				{"$ref": "#/definitions/Target"},
+				{
+					"type":"array",
+					"minItems": 1,
+					"items": {"$ref": "#/definitions/Target"}
+				}
+			]
+		},
+		"Target" : {
+			"title": "Target Schema",
+			"type" : "object",
+			"properties": {
+				"@id" : {"type":"string","format":"uri"},
+				"@type" : {"enum": ["oa:SpecificResource"]},
+				"hasSource" : {"$ref": "#/definitions/Publication"},
+				"hasSelector" : {"$ref" : "#/definitions/FragmentSelector"},
+				"hasState" : {"$ref": "#/definitions/RenditionState"},
+				"styleClass" : {"type":"string"},
+				"specificityLevel" : {"enum": ["release", "publication", "work"]}
+			},
+			"required" : ["@type", "hasSource"],
+    		"additionalProperties" : false
+		},
+
+		"Publication" : {
+			"title" : "Publication Schema",
+			"type" : "object",
+			"properties" : {
+				"@id" : {"type":"string", "format":"uri"},
+				"@type" : {"enum" : ["dctypes:Text"]},
+				"originURL" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+				"uniqueIdentifier" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+				"dcterms:modified" : {"$ref" : "#/definitions/literalOrListOfLiterals"},
+				"dc:identifier" : {"$ref" : "#/definitions/literalOrListOfLiterals"}
+			},
+			"additionalProperties" : true,
+			"required": ["@type"]
+		},
+
+		"FragmentSelector" : {
+			"title" : "FragmentSelector Schema",
+			"type" : "object",
+			"properties" : {
+				"@id" : {"type":"string","format":"uri"},
+				"@type" : {"enum": ["oa:FragmentSelector"]},
+				"value" : {"type":"string"}
+			},
+			"required" : ["@type", "value"],
+    		"additionalProperties" : false
+		},
+
+		"RenditionState" : {
+			"title" : "RenditionState Schema",
+			"type" : "object",
+			"properties" : {
+				"@id" : {"type":"string", "format":"uri"},
+				"@type" : {"enum" : ["epub:RenditionState"]},
+				"opfPath" : {"type":"string"}
+			},
+			"required" : ["@type", "opfPath"],
+    		"additionalProperties" : false
+		},
+
+		"Style" : {
+			"title" : "Style Object Schema",
+			"type": "object",
+			"properties" : {
+				"@id" : {"type":"string", "format":"uri"},
+				"@type" : {"enum" : ["oa:CssStyle"]},
+				"format" : {"enum" : ["text/css"]},
+				"chars" : {"type":"string"}
+			},
+			"required" : ["@type", "format", "chars"],
+    		"additionalProperties" : false
+		},
+
+		"Body" : {
+			"title": "Embedded Body Schema",
+			"type": "object",
+			"properties": {
+				"@id" : {"type": "string", "format":"uri"},
+				"format" : {"enum": ["application/xhtml+xml"]},
+				"@type": {"enum": ["dctypes:Text"]},
+				"chars": {"type":"string"},
+				"language": {"type":"string"},
+				"accessibilityFeature": {"$ref": "#/definitions/literalOrListOfLiterals"},
+				"accessibilityHazard": {"$ref": "#/definitions/literalOrListOfLiterals"},
+				"accessibilityAPI": {"$ref": "#/definitions/literalOrListOfLiterals"},
+				"accessibilityControl": {"$ref": "#/definitions/literalOrListOfLiterals"}
+			},	
+			"required": ["format", "@type", "chars"],
+    		"additionalProperties" : false
+		},
+
+		"resourceOrList": {
+			"title": "Resource or List of Resources Switch",
+			"anyOf": [
+				{"$ref": "#/definitions/uriOrResource"},
+				{
+					"type":"array",
+					"minItems": 1,
+					"items": {"$ref": "#/definitions/uriOrResource"}
+				}
+			]
+		},
+		"uriOrResource" : {
+			"title": "Resource Object or URI String Switch",
+			"anyOf": [
+				{"$ref": "#/definitions/uriOrCompactIri"},
+				{"$ref": "#/definitions/Resource"}
+			]
+		},
+    	"Resource" : {
+    		"title": "Resource Object with ID Schema",
+			"type":"object", 
+			"properties": {
+				"@id": {"$ref" : "#/definitions/uriOrCompactIri"}
+			},
+			"required": ["@id"],			
+    		"additionalProperties" : true
+    	},
+    	"uriOrListOfUrisNotResource" : {
+    		"title": "URI String or List of URI Strings Switch",
+    		"anyOf": [
+				{"$ref": "#/definitions/uriOrCompactIri"},
+ 				{
+ 					"type": "array",
+ 					"minItems": 1,
+ 					"items": {"$ref": "#/definitions/uriOrCompactIri"}
+ 				}
+    		]
+    	},
+    	"uriOrCompactIri" : {
+    		"title": "URI String Definition",
+    		"oneOf": [
+    			{"type": "string"}
+			]
+    	},		
+    	"literalOrListOfLiterals" : {
+    		"title": "Literal or List of Literals Switch",
+			"anyOf": [
+    			{"$ref": "#/definitions/stringLiteralOrDatatypedObject"},
+ 				{
+ 					"type": "array",
+ 					"minItems": 1,
+ 					"items": {"$ref": "#/definitions/stringLiteralOrDatatypedObject"}
+ 				}
+    		]
+    	},
+    	"stringLiteralOrDatatypedObject" : {
+    		"title": "Literal or Other Datatyped Object Definition",
+    		"anyOf": [
+    			{"type": "string"},
+    			{
+    				"type": "object",
+    				"properties": {
+    					"@value" : {"type": "string"},
+    					"@language": {
+    						"oneOf": [
+	    						{"type": "string"},
+	    						{"type": "null"}
+    						]
+    					},
+    					"@type": {"type":"string"}
+    				},
+    				"required" : ["@value"],
+    				"additionalProperties": false
+ 				}    			
+    		]
+    	}
+	}
+}

@@ -1,0 +1,184 @@
+{
+  "bodymatter": {
+    "partitions": {
+      "cover": "A section that introduces the work, often consisting of a marketing image, the title, author and publisher, and select quotes and reviews.",
+      "frontmatter": "Preliminary material to the main content of a publication, such as tables of contents, dedications, etc.",
+      "bodymatter": "The main content of a publication.",
+      "backmatter": "Ancillary material occurring after the main content of a publication, such as indices, appendices, etc."
+    },
+    "divisions": {
+      "volume": "A component of a collection.",
+      "part": "A major structural division in a work that contains a set of related sections dealing with a particular subject, narrative arc or similar encapsulated theme.",
+      "chapter": "A major thematic section of content in a work.",
+      "division": "A major structural division that may also appear as a substructure of a part (esp. in legislation)."
+    },
+    "navigation": {
+      "toc": "A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it.",
+      "toc-brief": "An abridged version of the table of contents.",
+      "landmarks": "A collection of references to well-known/recurring components within the publication",
+      "loa": "A listing of audio clips included in the work.",
+      "loi": "A listing of illustrations included in the work.",
+      "lot": "A listing of tables included in the work.",
+      "lov": "A listing of video clips included in the work."
+    },
+    "indexes": {
+      "index": "A navigational aid that provides a detailed list of links to key subjects, names and other important topics covered in the work.",
+      "index-headnotes": "Narrative or other content to assist users in using the index.",
+      "index-legend": "List of symbols, abbreviations or special formatting used in the index, and their meanings.",
+      "index-group": "Collection of consecutive main entries that share a common characteristic, for example the starting letter of the main entries.",
+      "index-entry-list": "Collection of consecutive main entries or subentries.",
+      "index-entry": "One term with any attendant subentries, locators, cross references, and/or editorial note.",
+      "index-term": "Word, phrase, string, glyph or image representing the indexable content.",
+      "index-editor-note": "Editorial note pertaining to a single entry.",
+      "index-locator": "A reference to an occurrence of the indexed content in the publication.",
+      "index-locator-list": "Collection of sequential locators or locator ranges.",
+      "index-locator-range": "A pair of locators that connects a term to a range of content rather than a single point.",
+      "index-xref-preferred": "Reference from one term to one or more preferred terms or term categories in an index (analogous to \"See xxx\").",
+      "index-xref-related": "Reference from one term to one or more related terms or term categories in an index (analogous to \"See also xxx\").",
+      "index-term-category": "Word, phrase, string, glyph or image representing a category of terms in the index.",
+      "index-term-categories": "Wrapper for a list of the term categories belonging to an index."
+    },
+    "glossaries": {
+      "glossary": "A brief dictionary of new, uncommon or specialized terms used in the content.",
+      "glossterm": "A glossary term.",
+      "glossdef": "The definition of a\n.\nterm in a glossary"
+    },
+    "bibliographies": {
+      "bibliography": "A list of external references cited in the work, which may be to print or digital sources.",
+      "biblioentry": "A single reference to an external source in a\n. A biblioentry typically provides more detailed information than its reference(s) in the content (e.g., full title, author(s), publisher, publication date, etc.).\nbibliography"
+    },
+    "asides": {
+      "case-study": "A detailed analysis of a specific topic.",
+      "notice": "Notifies the user of consequences that might arise from an action or event. Examples include warnings, cautions and dangers.",
+      "pullquote": "A distinctively placed or highlighted quotation from the current content designed to draw attention to a topic or highlight a key point.",
+      "tip": "Helpful information that clarifies some aspect of the content or assists in its comprehension.",
+      "aside": "Secondary or supplementary content."
+    },
+    "learning-obj": {
+      "learning-objective": "An explicit designation or description of a learning objective or a reference to an explicit learning objective.",
+      "learning-objectives": "A collection of\n.\nlearning-objectives",
+      "learning-outcome": "The understanding or ability a student is expected to achieve as a result of a lesson or activity.",
+      "learning-outcomes": "A collection of\n.\nlearing-outcomes",
+      "learning-resource": "A resource provided to enhance learning, or a reference to such a resource.",
+      "learning-resources": "A collection of\n.\nlearning-resources",
+      "learning-standard": "A formal set of expectations or requirements typically issued by a government or a standards body.",
+      "learning-standards": "A collection of\n.\nlearning-standards"
+    },
+    "testing": {
+      "answer": "The component of a self-assessment problem that provides the answer to the question.",
+      "answers": "A collection of\n.\nanswers",
+      "assessment": "A test, quiz, or other activity that helps measure a student's understanding of what is being taught.",
+      "assessments": "A collection of\n.\nassessments",
+      "feedback": "Instruction to the reader based on the result of an assessment.",
+      "fill-in-the-blank-problem": "A problem that requires the reader to input a text answer to complete a sentence, statement or similar.",
+      "general-problem": "A problem with a free-form solution.",
+      "qna": "A section of content structured as a series of questions and answers, such as an interview or list of frequently asked questions.",
+      "match-problem": "A problem that requires the reader to match the contents of one list with the corresponding items in another list.",
+      "multiple-choice-problem": "A problem with a set of potential answers to choose from ‒ some, all or none of which may be correct.",
+      "practice": "A review exercise or sample.",
+      "question": "The component of a self-assessment problem that identifies the question to be solved.",
+      "practices": "A collection of\n.\npractices",
+      "true-false-problem": "A problem with either a true or false answer."
+    },
+    "comics": {
+      "panel": "An individual frame, or drawing.",
+      "panel-group": "A group of\n(e.g., a strip).\npanels",
+      "balloon": "An area in a comic\nthat contains the words, spoken or thought, of a character.\npanel",
+      "text-area": "An area of text in a comic\n. Used to represent titles, narrative text, character dialogue (inside a\nor not) and similar.\npanel\nballoon",
+      "sound-area": "An area of text in a comic\nthat represents a sound.\npanel"
+    },
+    "notes": {
+      "footnote": "Ancillary information, such as a citation or commentary, that provides additional context to a referenced passage of text.",
+      "prologue": "An introductory section that sets the background to a work, typically part of the narrative.",
+      "endnote": "One of a collection of notes that occur at the end of a work, or a section within it, that provides additional context to a referenced passage of text.",
+      "footnotes": "A collection of\n.\nfootnotes",
+      "endnotes": "A collection of notes at the end of a work or a section within it."
+    },
+    "links": {
+      "biblioref": "A reference to a\n.\nbibliography entry",
+      "glossref": "A reference to a\n.\nglossary definition",
+      "noteref": "A reference to a note, typically appearing as a superscripted number or symbol in the main body of text.",
+      "backlink": "A link that allows the user to return to a related location in the content (e.g., from a\nto its reference or from a\nto where a\nis used).\nfootnote\nglossary definition\nterm"
+    },
+    "document-text": {
+      "credit": "An acknowledgment of the source of integrated content from third-party sources, such as photos. Typically identifies the creator, copyright and any restrictions on reuse.",
+      "keyword": "A key word or phrase.",
+      "topic-sentence": "A phrase or sentence serving as an introductory summary of the containing paragraph.",
+      "concluding-sentence": "A phrase or sentence serving as a concluding summary of the containing paragraph."
+    },
+    "pagination": {
+      "pagebreak": "A separator denoting the position before which a break occurs between two contiguous pages in a statically paginated version of the content.",
+      "page-list": "A navigational aid that provides a list of links to the\nin the content.\npagebreaks"
+    },
+    "tables": {
+      "table": "A structure containing data or content laid out in tabular form.",
+      "table-row": "A row of data or content in a tabular structure.",
+      "table-cell": "A single cell of tabular data or content."
+    },
+    "lists": {
+      "list": "A structure that contains an enumeration of related content items.",
+      "list-item": "A single item in an enumeration."
+    },
+    "figures": {
+      "figure": "An illustration, diagram, photo, code listing or similar, referenced from the text of a work, and typically annotated with a title, caption and/or credits."
+    },
+    "titles": {
+      "halftitle": "The title appearing on the first page of a work or immediately before the text.",
+      "fulltitle": "The full title of the work, either simple, in which case it is identical to\n, or compound, in which case it consists of a\nand a\n.\ntitle\ntitle\nsubtitle",
+      "title": "The primary name of a document component, such as a list, table or figure.",
+      "subtitle": "An explanatory or alternate title for the work, or a section or component within it.",
+      "label": "The text label that precedes an\nin a component title (e.g., 'Chapter', 'Part', 'Figure', 'Table').\nordinal",
+      "ordinal": "An ordinal specifier for a component in a sequence of components (e.g., '1', 'IV', 'B-1').",
+      "bridgehead": "A structurally insignificant heading that does not contribute to the hierarchical structure of the work."
+    }
+  },
+  "frontmatter": {
+    "titles": {
+      "covertitle": "The title of the work as displayed on the work's cover."
+    },
+    "preliminary": {
+      "titlepage": "The title page of the work.",
+      "halftitlepage": "The half title page of the work.",
+      "copyright-page": "The copyright page of the work.",
+      "seriespage": "Marketing section used to list related publications.",
+      "acknowledgments": "A section or statement that acknowledges significant contributions by persons, organizations, governments and other entities to the realization of the work.",
+      "imprint": "Information relating to the publication or distribution of the work.",
+      "imprimatur": "A formal statement authorizing the publication of the work.",
+      "contributors": "A list of contributors to the work.",
+      "other-credits": "Acknowledgments of previously published parts of the work, illustration credits, and permission to quote from copyrighted material.",
+      "errata": "A set of corrections discovered after initial publication of the work, sometimes referred to as corrigenda.",
+      "dedication": "An inscription at the front of the work, typically addressed in tribute to one or more persons close to the author.",
+      "revision-history": "A record of changes made to a work."
+    },
+    "sections": {
+      "abstract": "A short summary of the principle ideas, concepts and conclusions of the work, or of a section or excerpt within it.",
+      "foreword": "An introductory section that precedes the work, typically not written by the author of the work.",
+      "preface": "An introductory section that precedes the work, typically written by the author of the work.",
+      "introduction": "A preliminary section that typically introduces the scope or nature of the work.",
+      "preamble": "A section in the beginning of the work, typically containing introductory and/or explanatory prose regarding the scope or nature of the work's content",
+      "epigraph": "A quotation set at the start of the work or a section that establishes the theme or sets the mood."
+    }
+  },
+  "backmatter": {
+    "references": {
+      "appendix": "A section of supplemental information located after the primary content that informs the content but is not central to it.",
+      "colophon": "A short section of production notes particular to the edition (e.g., describing the typeface used), often located at the end of a work.",
+      "credits": "A collection of\n.\ncredits",
+      "keywords": "A collection of\n.\nkeywords"
+    },
+    "bibliographies": {
+      "bibliography": "A list of external references cited in the work, which may be to print or digital sources.",
+      "biblioentry": "A single reference to an external source in a\n. A biblioentry typically provides more detailed information than its reference(s) in the content (e.g., full title, author(s), publisher, publication date, etc.).\nbibliography"
+    },
+    "glossaries": {
+      "glossary": "A brief dictionary of new, uncommon or specialized terms used in the content.",
+      "glossterm": "A glossary term.",
+      "glossdef": "The definition of a\n.\nterm in a glossary"
+    },
+    "sections": {
+      "conclusion": "A concluding section or statement that summarizes the work or wraps up the narrative.",
+      "epilogue": "A concluding section of narrative that wraps up or comments on the actions and events of the work, typically from a future perspective.",
+      "afterword": "A closing statement from the author or a person of importance, typically providing insight into how the content came to be written, its significance, or related events that have transpired since its timeline."
+    }
+  }
+}

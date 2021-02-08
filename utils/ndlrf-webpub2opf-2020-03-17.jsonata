@@ -1,0 +1,175 @@
+(
+  $mapRel := function ($rel) {
+      $rel ? [
+          $lookup(
+              {"contents": "nav"},
+              $rel
+          ),
+          $rel
+      ][0] : undefined
+  };
+  $urlToId := function ($url) {
+    $url ? $replace($split($url, "/")[-1] ? $split($url, "/")[-1] : $url, /(\.html$|\.xhtml$|toc\.)/, "") : undefined
+  };
+  $setDc := function ($dcType, $value, $attributes) {
+    $value ? $value.{
+      "type": "element",
+      "name": $dcType,
+      "attributes": $attributes,
+      "elements": [
+        {
+          "type": "text",
+          "text": $
+        }
+      ]
+    } : undefined
+  };
+  $setProperty := function($property, $value, $attributes) {
+      $value ? $value.{
+      	"type": "element",
+        "name": "meta",
+        "attributes": $merge([{"property": $property}, $attributes]),
+        "elements": [{"type": "text", "text": $}]
+      } : undefined
+  };
+  {
+    "declaration": {
+      "attributes": {
+        "version": '1.0',
+        "encoding": $.encoding ? $.encoding : "utf-8"
+      }
+    },
+    "elements": [
+      {
+        "type": 'element',
+        "name": 'package',
+        "attributes": {
+          "version": '3.0',
+          "xmlns": "http://www.idpf.org/2007/opf",
+          "prefix": "ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/",
+          "unique-identifier": "bookid"
+        },
+        "elements": [
+          {
+            "type": "element",
+            "name": "metadata",
+            "attributes": {
+              "xmlns:rendition": 'http://www.idpf.org/vocab/rendition/#',
+              "xmlns:opf": 'http://www.idpf.org/2007/opf',
+              "xmlns:dc": 'http://purl.org/dc/elements/1.1/'
+            },
+            "elements": [
+              $setProperty("rendition:layout", "reflowable"),
+              $setProperty("rendition:orientation", "auto"),
+              $setProperty("rendition:spread", "auto"),
+              $urlToId($.resources[rel="cover-image"].url) ? {
+                "name": "meta",
+                "type": "element",
+                "attributes": {
+                  "name": "cover",
+                  "content": $urlToId($.resources[rel="cover-image"].url)
+                }
+              } : undefined,
+              {
+                "name": "meta",
+                "type": "element",
+                "attributes": {"property": "ibooks:specified-fonts"},
+                "elements": [{"type": "text", "text": "true"}]
+              },
+              $setDc("dc:title", $.name),
+              $setDc("dc:creator", $.creator),
+              $setDc("dc:contributor", $.contributor),
+              $setDc("dc:date", $.datePublished),
+              $setDc("dc:language", $.inLanguage),
+              $setProperty("dcterms:modified", $.dateModified),
+              $setDc("dc:identifier", $.id, {"id": "bookid"}),
+              $setDc("dc:source", $.source, {"id": "src-id"}),
+              $.source ? $setProperty("source-of", "pagination", {"refines": "#src-id"}) : undefined,
+              $setProperty("schema:abridged", $.abridged),
+              $setProperty("media:duration", $.duration),
+              $setProperty("schema:url", $.url),
+              $setDc("dc:coverage", $.coverage),
+              $setDc("dc:description", $.description),
+              $setDc("dc:format", $.format),
+              $setDc("dc:publisher", $.publisher),
+              $setDc("dc:relation", $.relation),
+              $setDc("dc:rights", $.rights),
+              $setDc("dc:subject", $.subject),
+              $setDc("dc:type", $.conformsTo),
+              $setProperty("schema:accessibilitySummary", $.accessibilitySummary),
+              $setProperty("schema:accessMode", $.accessMode),
+              $.accessModeSufficient ? $.accessModeSufficient[].$setProperty("schema:accessModeSufficient", $join($.itemListElement, ",")),
+              $setProperty("schema:accessibilityFeature", $.accessibilityFeature),
+              $setProperty("schema:accessibilityFeature", $.accessibilityAPI),
+              $setProperty("schema:accessibilityHazard", $.accessibilityHazard),
+              $setProperty("schema:accessibilityControl", $.accessibilityControl),
+              $setProperty("a11y:certifiedBy", $."a11y:certifiedBy"),
+              $setProperty("schema:type", $.type),
+              {
+                "type": "element",
+                "name": "link",
+                "elements": [],
+                "attributes": {
+                  "rel": "alternate",
+                  "href": "manifest.json",
+                  "media-type": "application/webpub+json"
+                }
+              }
+            ]
+          },
+          {
+            "type": 'element',
+            "name": 'manifest',
+            "elements": $append($append(
+              $.resources,
+              $.readingOrder
+              ),
+              [
+                {
+                  "type": "element",
+                  "name": "item",
+                  "attributes": {
+                    "href": "toc.ncx",
+                    "id": "ncx",
+                    "media-type": "application/x-dtbncx+xml"
+                  }
+                }
+              ]
+            ).{
+              "type": 'element',
+              "name": 'item',
+              "attributes": $merge([
+                {
+                  "id": $urlToId($.url),
+                  "href": $.url,
+                  "properties": $.properties,
+                  "media-type": $.encodingFormat
+                },
+                $.attributes ? $.attributes : {}
+              ])
+            }
+          },
+          {
+            "type": 'element',
+            "name": 'spine',
+            "attributes": {
+              "toc": 'ncx',
+              "page-progression-direction": $.direction
+            },
+            "elements": $append($.resources[$contains($.url ? $.url : "", ".xhtml")].$merge([$, {"linear": "yes"}]), $.readingOrder).{
+              "type": 'element',
+              "name": 'itemref',
+              "attributes": {
+                /* "properties": $.properties, */
+                "linear": $.linear,
+                "idref": $urlToId($.url)
+                /* ,
+                "properties": $.properties.page ? "page-spread-" & $.properties.page : undefined */
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+)
